@@ -1,0 +1,58 @@
+
+<div class="header">
+    <!-- 2025.06.29 -->
+    <!-- 배너의 가로 넓이가 짧아 배경컬러를 넣어줌 -->
+    <div class="top_header_banner" style="background-color:#191F28 ;">
+        <a class="h_close_btn" href="#" onclick="$(this).parent().hide(); return false;"><img src="../../images/common/header_banner_x.svg" alt="배너닫기"></a>
+        <div class="h_inner">
+            <div class="main_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#1"><img src="https://placehold.co/375x45/191F28/FFFFFF/png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#2"><img src="https://placehold.co/375x45/191F28/FFFFFF/png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#3"><img src="https://placehold.co/375x45/191F28/FFFFFF/png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#4"><img src="https://placehold.co/375x45/191F28/FFFFFF/png" alt=""></a>
+                    </div>
+                    
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+    </div> 
+   
+    <!-- //2025.06.29 -->
+	<div class="inner">
+		<p class="logo"><a href="#"><img src="../../images/header/logo.svg" alt="myrental"></a></p>
+		<p class="util_menu">
+			<a href="#"><img src="../../images/header/icon_search.svg" alt="검색"></a>
+			<a href="#"><img src="../../images/header/icon_person.svg" alt="로그인"></a>
+			<a href="#"><img src="../../images/header/icon_basket.svg" alt="장바구니"></a>
+		</p>
+	</div>
+</div>
+<script>
+
+    $(function(){
+        const swiperContainer = document.querySelector('.top_header_banner .main_swiper');
+            const slides = swiperContainer.querySelectorAll('.swiper-slide');
+            // 슬라이드 요소가 1개이상일때 실행
+            if (slides.length > 1) {
+                console.log("헤더모션실행")
+                const top_header_banner = new Swiper('.top_header_banner .main_swiper', {
+                    direction: "vertical",
+                    loop: true,
+                    slidesPerView: 1,
+                    autoplay: {
+                        delay: 6000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
+                        disableOnInteraction: false, // 상호작용 후에도 autoplay 유지
+                    },
+                });
+            }
+    })
+</script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+		<meta property="og:site_name" content="" />
+		<title>마이페이지</title>
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+
+	</head>
+
+	<body>
+		<div id="wrap">
+
+			<!-- include header(로고, 검색, 로그인, 장바구니) -->
+			<header id="header"></header>
+
+
+
+			<!-- 주요 본문 -->
+			<main id="container">
+				<div class="mypage">
+					<article class="page7">
+						<p class="tit">
+							회원정보수정
+							<a class="btn" href="#aa">저장</a>
+						</p>
+						<p class="sub_tit">기존 비밀번호</p>
+						
+						<div class="inner">
+							<!-- 잘못입력시 wrong 클래스추가 -->
+							<section class="password_case wrong">
+								<p class="inp_case">
+									<span class="icon_eye_hide"></span>
+									<input type="password" placeholder="기존 비밀번호">
+									<span class="wrong_txt">비밀번호가 일치하지 않습니다.</span>
+								</p>
+								<a class="btn_address_find" href="#addressbtn">확인</a>
+							</section>
+							<div class="password_box">
+								<!-- 잘못입력시 wrong 클래스추가 -->
+								<section class="password_case wrong">
+									<p class="inp_case">
+										<span class="icon_eye_hide"></span>
+										<input type="password" placeholder="새 비밀번호">
+										<span class="wrong_txt">영문,숫자 포함 총 8-20자 이내로 입력해주세요.</span>
+									</p>
+								</section>
+								<!-- 잘못입력시 wrong 클래스추가 -->
+								<section class="password_case wrong">
+									<p class="inp_case">
+										<span class="icon_eye_hide"></span>
+										<input type="password" placeholder="새 비밀번호 확인">
+										<span class="wrong_txt">비밀번호가 일치하지 않습니다.</span>
+									</p>
+								</section>
+							</div>
+						</div>
+						
+					</article>
+				</div>
+			</main>
+
+
+
+
+
+
+		</div>
+		<!-- // wrap -->
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"> </script>
+
+	</body>
+
+</html>

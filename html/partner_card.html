@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+		<meta property="og:site_name" content="" />
+		<title>제휴카드</title>
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+
+	</head>
+
+	<body>
+		<div id="wrap">
+
+			<!-- include header(로고, 검색, 로그인, 장바구니) -->
+			<header id="header"></header>
+
+			<!-- include top & side menu (탑메뉴 , 햄버거클릭 사이드 메뉴) -->
+			<nav id="navi"></nav>
+
+
+			<!-- 주요 본문 -->
+			<main id="container">
+				<div class="partnerCard">
+					<div class="inner">
+						<p class="title">제휴카드</p>
+
+						<!-- 
+							자세히 보기클릭시  
+							active 클래스 추가
+						-->
+						<ul class="card_list">
+							<!-- 
+							클래스 <li class="transformation"> 유무에따라 
+
+							하위에 선언되어있는 active 클래스의 보이고 , 안보이고 상태가 변경됨
+						-->
+							<li class="  ">
+								<a class="btn_close active" href="#" onclick="$(this).parent().removeClass('transformation'); return false"><span class="ir_su">닫기</span></a>
+								<p class="card_img_case active">
+									<img class="img" src="../images/partner_card/card_sample_img.png" alt="카드샘플이미지">
+								</p>
+								<div class="card_info_case">
+									<div class="top">
+										<p class="c_brand">국민</p>
+										<p class="c_name">더 심플 하나카드</p>
+										<ul class="list">
+											<li>-30만원 사용시 17,000원 할인</li>
+											<li>-80만원 사용시 20,000원 할인</li>
+										</ul>
+									</div>
+								</div>
+								<div class="info_detail active">
+									<div class="detail_inner">
+										<div class="t1_case">
+											<p class="txt_type1">
+												<span class="t1">혜택</span>
+												<span class="t2">마이렌탈 이용요금 자동이체 시 월 최대 20,000원 청구 할인할인</span>
+											</p>
+										</div>
+										<div class="t1_case">
+											<p class="txt_type1">
+												<span class="t1">할인내용</span>
+												<span class="t2">전월 이용 실적에 따라 할인 적용</span>
+											</p>
+											<ul class="detail_list">
+												<li>·&nbsp;&nbsp;매월 30만원 이상 사용 시, 10,000원 매월 청구 할인</li>
+												<li>·&nbsp;&nbsp;매월 80만원 이상 사용 시, 15,000원 매월 청구 할인</li>
+											</ul>
+										</div>
+										<div class="t1_case">
+											<p class="txt_type1">
+												<span class="t1">프로모션</span>
+												<span class="t2">프로모션 행사기간 : 2023.12.01-12.31</span>
+											</p>
+											<ul class="detail_list">
+												<li>·&nbsp;&nbsp;30만원 이상, 17,000원 청구 할인</li>
+											</ul>
+											<p class="detail_list_bot">(카드 서비스 10,000원 할인, 프로모션 혜택 7,000원 추가 할인)</p>
+											<ul class="detail_list">
+												<li>·&nbsp;&nbsp;80만원 이상, 20,000원 청구 할인</li>
+											</ul>
+											<p class="detail_list_bot">(카드 서비스 15,000원 할인, 프로모션 혜택 5,000원 추가 할인)</p>
+										</div>
+
+										<div class="notice_case">
+											<p>* 30만원 사용 시 1~24개월 17,000원/25개월~ 10,000원 할인 적용</p>
+											<p>*카드서비스 및 프로모션 혜택은 횟수 제한 없이 월 할인 한도 내에서 합산 할인됩니다.</p>
+											<p>*프로모션 기간 내 월납요금 대상 가맹점에서 최초 자동이체 등록시 제공됩니다.</p>
+										</div>
+									</div>
+								</div>
+								<div class="btn_case active">
+									<a class="btn_01" href="#" onclick="$(this).parent().parent().addClass('transformation'); return false">자세히보기</a>
+									<a class="btn_02" href="#">카드신청하기</a>
+								</div>
+							</li>
+							<li class="  ">
+								<a class="btn_close active" href="#" onclick="$(this).parent().removeClass('transformation'); return false"><span class="ir_su">닫기</span></a>
+								<p class="card_img_case active">
+									<img class="img" src="../images/partner_card/card_sample_img.png" alt="카드샘플이미지">
+								</p>
+								<div class="card_info_case">
+									<div class="top">
+										<p class="c_brand">국민</p>
+										<p class="c_name">더 심플 하나카드</p>
+										<ul class="list">
+											<li>-30만원 사용시 17,000원 할인</li>
+											<li>-80만원 사용시 20,000원 할인</li>
+										</ul>
+									</div>
+								</div>
+								<div class="info_detail active">
+									<div class="detail_inner">
+										<div class="t1_case">
+											<p class="txt_type1">
+												<span class="t1">혜택</span>
+												<span class="t2">마이렌탈 이용요금 자동이체 시 월 최대 20,000원 청구 할인할인</span>
+											</p>
+										</div>
+										<div class="t1_case">
+											<p class="txt_type1">
+												<span class="t1">할인내용</span>
+												<span class="t2">전월 이용 실적에 따라 할인 적용</span>
+											</p>
+											<ul class="detail_list">
+												<li>·&nbsp;&nbsp;매월 30만원 이상 사용 시, 10,000원 매월 청구 할인</li>
+												<li>·&nbsp;&nbsp;매월 80만원 이상 사용 시, 15,000원 매월 청구 할인</li>
+											</ul>
+										</div>
+										<div class="t1_case">
+											<p class="txt_type1">
+												<span class="t1">프로모션</span>
+												<span class="t2">프로모션 행사기간 : 2023.12.01-12.31</span>
+											</p>
+											<ul class="detail_list">
+												<li>·&nbsp;&nbsp;30만원 이상, 17,000원 청구 할인</li>
+											</ul>
+											<p class="detail_list_bot">(카드 서비스 10,000원 할인, 프로모션 혜택 7,000원 추가 할인)</p>
+											<ul class="detail_list">
+												<li>·&nbsp;&nbsp;80만원 이상, 20,000원 청구 할인</li>
+											</ul>
+											<p class="detail_list_bot">(카드 서비스 15,000원 할인, 프로모션 혜택 5,000원 추가 할인)</p>
+										</div>
+
+										<div class="notice_case">
+											<p>* 30만원 사용 시 1~24개월 17,000원/25개월~ 10,000원 할인 적용</p>
+											<p>*카드서비스 및 프로모션 혜택은 횟수 제한 없이 월 할인 한도 내에서 합산 할인됩니다.</p>
+											<p>*프로모션 기간 내 월납요금 대상 가맹점에서 최초 자동이체 등록시 제공됩니다.</p>
+										</div>
+									</div>
+								</div>
+								<div class="btn_case active">
+									<a class="btn_01" href="#" onclick="$(this).parent().parent().addClass('transformation'); return false">자세히보기</a>
+									<a class="btn_02" href="#">카드신청하기</a>
+								</div>
+							</li>
+						</ul>
+
+						<div class="tip_area">
+							<p class="tit">제휴카드로 할인 받는 방법</p>
+							<ul>
+								<li>
+									<div class="icon_case"></div>
+									<div class="text_case">
+										<p class="t1">step1</p>
+										<p class="t2">렌탈 상품 계약 완료</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon_case">
+
+									</div>
+									<div class="text_case">
+										<p class="t1">step2</p>
+										<p class="t2">제휴카드 발급 신청</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon_case">
+
+									</div>
+									<div class="text_case">
+										<p class="t1">step3</p>
+										<p class="t2">렌탈 상품 수령 or 설치</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon_case">
+
+									</div>
+									<div class="text_case">
+										<p class="t1">step4</p>
+										<p class="t2">제휴카드로 납부정보 변경</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<a class="btn_customer_service" href="#고객센터">고객센터 1660-2627</a>
+					</div>
+				</div>
+			</main>
+
+
+
+			<!-- include footer -->
+			<footer id="footer"></footer>
+
+			<!-- include floating (상단으로 이동 , 최근본상품 , 톡상담, 상담예약, 사업자견적 , 입점문의) -->
+			<footer id="floating"></footer>
+
+
+		</div>
+		<!-- // wrap -->
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"> </script>
+
+	</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+		<meta property="og:site_name" content="" />
+		<title>마이페이지</title>
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+
+	</head>
+
+	<body>
+		<div id="wrap">
+
+			<!-- include header(로고, 검색, 로그인, 장바구니) -->
+			<header id="header"></header>
+
+
+
+			<!-- 주요 본문 -->
+			<main id="container">
+				<div class="mypage">
+					<article class="page3">
+						<p class="tit">
+							1:1문의
+							<a class="btn" href="#aa">완료</a>
+						</p>
+						<div class="choice_case">
+							<div class="inner">
+								<label class="btn">
+									<input type="radio" name="month_period_1">
+									<span class="label">가입</span>
+								</label>
+								<label class="btn">
+									<input type="radio" name="month_period_1">
+									<span class="label">결제</span>
+								</label>
+								<label class="btn">
+									<input type="radio" name="month_period_1">
+									<span class="label">배송/설치</span>
+								</label>
+								<label class="btn">
+									<input type="radio" name="month_period_1">
+									<span class="label">A/S</span>
+								</label>
+								<label class="btn">
+									<input type="radio" name="month_period_1">
+									<span class="label">명의변경</span>
+								</label>
+								<label class="btn">
+									<input type="radio" name="month_period_1">
+									<span class="label">해지</span>
+								</label>
+								<label class="btn">
+									<input type="radio" name="month_period_1">
+									<span class="label">기타</span>
+								</label>
+							</div>
+						</div>
+						<div class="msg_case">
+							<p class="tit">내용</p>
+							<div class="inp_textarea">
+								<textarea name="" id="" placeholder="접수된 문의를 순차적으로 답변을 드리고 있습니다.&#10;문의내용을 상세히 기재해 주셔야 정확한 답변이 가능합니다. "></textarea>
+							</div>
+						</div>
+						<div class="msg_case">
+							<p class="tit">사진</p>
+							<!-- 이미지들어가기전 -->
+							<div class="inp_flle">
+								<a class="btn_file_del" href="#"><span class="ir_su">파일제거</span></a>
+								<div class="img_box">
+									
+								</div>
+								<input  type="file" name="myfile" />
+							</div>
+							<!-- 이미지들어간후  check_file 클래스 추가-->
+							<div class="inp_flle check_file">
+								<a class="btn_file_del" href="#"><span class="ir_su">파일제거</span></a>
+								<div class="img_box">
+									<img src="../images/partner_card/card_sample_img.png" alt="업로드이미지">
+								</div>
+								<input  type="file" name="myfile" />
+							</div>
+
+						</div>
+					</article>
+				</div>
+			</main>
+
+
+
+
+
+
+		</div>
+		<!-- // wrap -->
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"> </script>
+
+	</body>
+
+</html>

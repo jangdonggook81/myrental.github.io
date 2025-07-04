@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:site_name" content="" />
+	<title>장바구니 - 렌탈 로그인o</title>
+	
+  	<!-- favicon -->
+  	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+	
+</head>
+
+<body>
+	<div id="wrap">
+		
+
+		<!-- include header(로고, 검색, 로그인, 장바구니) -->
+		<header id="header"></header>
+		
+		<!-- 주요 본문 -->
+		<main id="container">
+			<div class="rentalApplication">
+				<div class="top">
+					<p class="tit">렌탈신청</p>
+				</div>
+				<div class="middle">
+					<div class="title_line">
+						<p class="t1">신청정보</p>
+						<p class="t2"><span>*</span>필수입력</p>
+					</div>
+					<div class="name_case">
+						<p class="tit">이름<span>*</span></p>
+						<p class="inp_case">
+							<input type="text" placeholder="이름" value="한승수">
+						</p>
+					</div>
+					<div class="phone_case">
+						<p class="tit">휴대폰 번호<span>*</span></p>
+						<p class="inp_case">
+							<input type="text" placeholder="휴대폰 번호" value="070-700-7070">
+						</p>
+					</div>
+					<div class="address_case">
+						<p class="tit">주소<span>*</span></p>
+						<div class="address_area">
+							<p class="inp_case">
+								<input type="text" placeholder="주소" value="서울시 구로구">
+							</p>
+							<a class="btn_address_find" href="#addressbtn">우편번호찾기</a>
+						</div>
+						<p class="inp_case">
+							<input type="text" placeholder="상세주소" value="구로디지털단지 99번출구">
+						</p>
+					</div>
+					<div class="title_line">
+						<p class="t1">상담정보</p>
+					</div>
+					<div class="phone_time_case">
+						<p class="tit">통화 가능 시간</p>
+						<div class="time_area">
+							<p class="select_case">
+								<select name="" class="option_select">
+									<!-- 선택전 보이게 -->
+									<option style="display: none;" disabled selected>00시</option>
+									<option value="00">00시</option>
+									<option value="03">03시</option>
+									<option value="06">06시</option>
+									<option value="09">09시</option>
+								</select>
+								<span class="water_wave">~</span>
+								<select name="" class="option_select">
+									<!-- 선택전 보이게 -->
+									<option style="display: none;" disabled selected>00시</option>
+									<option value="00">00시</option>
+									<option value="03">03시</option>
+									<option value="06">06시</option>
+									<option value="09">09시</option>
+								</select>
+							</p>
+							<p class="tit_noti_time">
+								(12시-13시 점심시간)
+							</p>
+						</div>
+					</div>
+					<div class="msg_case">
+						<p class="tit">메세지 입력</p>
+						<div class="inp_textarea">
+							<span class="word">0/200자</span>
+							<textarea name="" id="" placeholder="궁금한 내용을 적어주세요."></textarea>
+						</div>
+					</div>
+					<div class="tit_product_info_case">
+						<span class="tit">상품정보</span>
+						<div class="price_case">
+							<span class="pc_1">2건</span>
+							<span class="pc_2">38,800원</span>
+							<a class="pc_arr" href="#aa" onclick="$('.buy_info_area').slideToggle(); $(this).parent().toggleClass('active')"></a>
+						</div>
+					</div>
+
+					<div class="buy_info_area" style="display: none;">
+						<ul class="list">
+							<li>
+								<div class="r_box">
+									<div class="r_box">
+									<div class="left"><p class="img_case"><img src="../images/recent_products/smaple_img_01.png" alt="샘플"></p></div>
+									<div class="right">
+										<p class="t1_brand">삼성</p>
+										<p class="t2_products_name">결합2봉 그랑데 AI 드럼세탁기 10kg</p>
+										<p class="t2_condition">렌탈약정 60개월 | 색상블랙 | 하나카드</p>
+										<p class="t3_price">월렌탈료<span class="t_number">38,800원</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="r_box">
+									<div class="left"><p class="img_case"><img src="../images/recent_products/smaple_img_02.png" alt="샘플"></p></div>
+									<div class="right">
+										<p class="t1_brand">삼성</p>
+										<p class="t2_products_name">결합2봉 그랑데 AI 드럼세탁기 10kg 결합2봉 그랑데 AI 드럼세탁기 10kg</p>
+										<p class="t2_condition">렌탈약정 60개월 | 색상블랙 | 하나카드</p>
+										<p class="t3_price">월렌탈료<span class="t_number">38,800원</span></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="price_case2">
+							<p class="tit_box_01">
+								<span class="tb_01">금액</span>
+								<span class="tb_02">월 58,800원</span>
+							</p>
+							<p class="tit_box_02">
+								<span class="tb_01">예상할인금액</span>
+								<span class="tb_02">-월 27,000원</span>
+							</p>
+						</div>
+						<div class="price_case3">
+							<div class="inner">
+								<span class="tb_01">최종예상금액</span>
+								<span class="tb_02">월 18,800원</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="agree_area">
+						<div class="ques">
+							<p class="checkCase">
+								<input type="checkbox" id="agree">
+								<label for="agree"></label>
+							</p>
+							<p class="wordCase">
+								<span class="color_point">[필수]</span> 개인정보 수집 및 이용에 관한 사항에 동의함
+							</p>
+						</div>
+						<a class="btn_all_view" href="#전문보기">전문보기</a>
+					</div>
+				</div>
+				<div class="bottom_fixed">
+					<p class="tit">총 2건 114,000원</p>
+					<a class="btn" href="#aa">선택상품렌탈</a>
+				</div>
+			</div>
+		</main>
+
+
+
+	
+			
+		
+	</div>
+	<!-- // wrap -->
+	
+  
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"> </script> 
+	
+</body>
+
+</html>
+

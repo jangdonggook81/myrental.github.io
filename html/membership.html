@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+		<meta property="og:site_name" content="" />
+		<title>회원가입</title>
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+
+	</head>
+
+	<body>
+		<div id="wrap">
+
+			<!-- include header(로고, 검색, 로그인, 장바구니) -->
+			<header id="header"></header>
+
+
+
+			<!-- 주요 본문 -->
+			<main id="container">
+				<div class="membership">
+					<p class="tit">회원가입</p>
+					<div class="inner">
+						<article class="info_area">
+							<section class="name_case">
+								<p class="tit">이름</p>
+								<p class="inp_case">
+									<input type="text" placeholder="이름" value="한승수" readonly>
+								</p>
+							</section>
+							<section class="name_case">
+								<p class="tit">이름</p>
+								<p class="inp_case">
+									<input type="text" placeholder="이름">
+								</p>
+							</section>
+
+							<section class="email_case ">
+								<p class="tit">이메일</p>
+								<p class="inp_case">
+									<input type="text" placeholder="이메일">
+								</p>
+							</section>
+							<!-- 
+								잘못입력시 wrong 추가
+							 -->
+							<section class="password_case wrong">
+								<p class="tit">비밀번호</p>
+								<p class="inp_case">
+									<span class="icon_eye_hide"></span>
+									<input type="password" placeholder="비밀번호">
+									<span class="wrong_txt">영문,숫자 포함 총 8-20자 이내로 입력해주세요.</span>
+								</p>
+							</section>
+							<div class="address_case">
+								<p class="tit">주소</p>
+								<div class="right">
+									<div class="address_area">
+										<p class="inp_case">
+											<input type="text" placeholder="주소">
+										</p>
+										<a class="btn_address_find" href="#addressbtn">우편번호찾기</a>
+									</div>
+									<p class="inp_case">
+										<input type="text" placeholder="상세주소">
+									</p>
+								</div>
+							</div>
+							<div class="phone_cert">
+								<p class="tit">휴대전화</p>
+								<div class="right">
+									<div class="address_area">
+										<p class="inp_case">
+											<input type="text" placeholder="010-1234-1234">
+										</p>
+										<a class="btn_address_find" href="#addressbtn" onclick="$(this).parent().next().addClass('send_number');return false;">인증번호 전송</a>
+									</div>
+									<!-- 
+										인증번호 전송시 send_number 클래스 추가
+									-->
+									<p class="inp_case ">
+										<a class="btn_ok" href="#확인">확인</a>
+										<span class="noti_time">03:00</span>
+										<input class="cert_filed" type="text" placeholder="인증번호">
+										<span class="noti_txt">인증번호가 전송되었습니다.</span>
+									</p>
+
+								</div>
+							</div>
+						</article>
+						<div class="btn_case">
+							<a class="btn_apply" href="#btn" onclick="$('.agree_area').addClass('active'); return false">회원가입</a>
+						</div>
+					</div>
+
+					<!-- 동의하기영역 active 클래스 추가 -->
+					<div class="agree_area ">
+
+						<div class="inner">
+							<div class="top">
+								<div class="box">
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree">
+											<label for="agree"></label>
+										</p>
+										<p class="wordCase">전체동의</p>
+									</div>
+									<a class="btn_close" href="#close" onclick="$(this).parent().parent().parent().parent().removeClass('active')"><span class="ir_su">닫기</span></a>
+								</div>
+							</div>
+							<div class="middle">
+								<div class="box">
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree" checked>
+											<label for="agree"></label>
+										</p>
+										<p class="wordCase">서비스 이용약관</p>
+									</div>
+									<a class="btn_msg" href="#msg">내용보기</a>
+								</div>
+								<div class="box">
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree">
+											<label for="agree"></label>
+										</p>
+										<p class="wordCase">개인정보 수집 및 이용</p>
+									</div>
+									<a class="btn_msg" href="#msg">내용보기</a>
+								</div>
+								<div class="box">
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree">
+											<label for="agree"></label>
+										</p>
+										<p class="wordCase">혜택 및 마케팅 정보 수신 동의 (선택)</p>
+									</div>
+									<a class="btn_msg" href="#msg">내용보기</a>
+								</div>
+							</div>
+							<div class="bottom">
+								<div class="btn_case">
+									<a class="btn_apply" href="#btn" onclick="$(this).parent().parent().parent().parent().removeClass('active'); return false">완료하기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+
+
+
+
+
+		</div>
+		<!-- // wrap -->
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"> </script>
+
+	</body>
+
+</html>

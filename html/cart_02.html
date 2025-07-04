@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:site_name" content="" />
+	<title>장바구니 상품O</title>
+	
+  	<!-- favicon -->
+  	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+	
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="pop_area" style="display:none;">
+			<div class="type02">
+				<div class="top">
+					<p class="t1">신청서가 접수되었습니다.</p>
+				</div>
+				<div class="bottom">
+					<a href="#확인" onclick="$('.pop_area').hide(); return false">아니요</a>
+					<a href="#삭제">삭제</a>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- include header(로고, 검색, 로그인, 장바구니) -->
+		<header id="header"></header>
+		
+		<!-- 주요 본문 -->
+		<main id="container">
+			<div class="cart">
+				<div class="top">
+					<p class="tit">장바구니</p>
+				</div>
+				<div class="middle">
+					<div class="ques_case">
+						<div class="ques">
+							<p class="checkCase">
+								<input type="checkbox" id="agree">
+								<label for="agree"></label>
+							</p>
+							<p class="wordCase">전체선택</p>
+						</div>
+					</div>
+
+					<div class="choice_case">
+						<ul class="list">
+							<li>
+								<a class="btn_del" href="#a"  onclick="$('.pop_area').show(); return false"><span class="ir_su">삭제</span></a>
+								<div class="l_box">
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree">
+											<label for="agree"></label>
+										</p>
+									</div>
+								</div>
+								<div class="r_box">
+									<div class="r_box">
+									<div class="left"><p class="img_case"><img src="../images/recent_products/smaple_img_01.png" alt="샘플"></p></div>
+									<div class="right">
+										<p class="t1_brand">삼성</p>
+										<p class="t2_products_name">결합2봉 그랑데 AI 드럼세탁기 10kg</p>
+										<p class="t2_condition">렌탈약정 60개월 | 색상블랙 | 하나카드</p>
+										<p class="t3_price">월렌탈료<span class="t_number">38,800원</span></p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="btn_del" href="#a"  onclick="$('.pop_area').show(); return false"><span class="ir_su">삭제</span></a>
+								<div class="l_box">
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree">
+											<label for="agree"></label>
+										</p>
+									</div>
+								</div>
+								<div class="r_box">
+									<div class="left"><p class="img_case"><img src="../images/recent_products/smaple_img_02.png" alt="샘플"></p></div>
+									<div class="right">
+										<p class="t1_brand">삼성</p>
+										<p class="t2_products_name">결합2봉 그랑데 AI 드럼세탁기 10kg</p>
+										<p class="t2_condition">렌탈약정 60개월 | 색상블랙 | 하나카드</p>
+										<p class="t3_price">월렌탈료<span class="t_number">38,800원</span></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottom">
+					
+					<div class="buy_info_area">
+						<div class="price_case2">
+							<p class="tit_box_01">
+								<span class="tb_01">금액</span>
+								<span class="tb_02">월 58,800원</span>
+							</p>
+							<p class="tit_box_02">
+								<span class="tb_01">예상할인금액</span>
+								<span class="tb_02">-월 27,000원</span>
+							</p>
+						</div>
+						<div class="price_case3">
+							<div class="inner">
+								<span class="tb_01">최종예상금액</span>
+								<span class="tb_02">월 18,800원</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="bottom_fixed">
+					<p class="tit">총 2건 114,000원</p>
+					<a class="btn" href="#aa">선택상품렌탈</a>
+				</div>
+			</div>
+		</main>
+
+
+
+	
+			
+		
+	</div>
+	<!-- // wrap -->
+	
+  
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"> </script> 
+	
+</body>
+
+</html>
+

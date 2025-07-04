@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:site_name" content="" />
+	<title>샘플프로젝트</title>
+	
+  	<!-- favicon -->
+  	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+	
+</head>
+
+<body>
+	<div id="wrap">
+               
+		<!-- 페이지 헤더 -->
+		<header id="header">
+			<!-- <div class="inner">
+
+			</div> -->
+		</header>
+
+		<!-- 네비게이션 메뉴 -->
+		<nav id="navi">
+			<div class="inner">
+
+			</div>
+		</nav>
+
+		<!-- 사이드 네비게이션 -->
+		<aside id="sideNavi">
+			<div class="inner">
+
+			</div>
+		</aside>
+
+		<!-- 주요 본문 -->
+		<!-- book (페이지별로 다르게) -->
+		<main id="container" class="book">
+			book 본문
+			<div class="inner">
+				<section class="sample01">
+					<div class="inner"></div>
+				</section>
+				<section class="sample02">
+					<div class="inner"></div>
+				</section>
+				<section class="sample03">
+					<div class="inner"></div>
+				</section>
+			</div>
+		</main>
+
+		<!-- 페이지 푸터 -->
+		<footer id="footer">
+			<!-- <div class="inner">
+
+			</div> -->
+		</footer>
+			
+		<a href="#" onclick="pop.open(); return false">샘플 모달 호출</a>
+		<div class="pop_layout pop1" style="display:none;">
+			<div class="pop_inner" role="document">
+				<a href="#" class="close" style="position: absolute; right:0; top:0; width:50px; height:50px; display: block; border:1px solid red; color:#fff";>닫기</a>
+				<div class="pop_content">
+					팝업테스트입니다.start<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다.<br>
+					팝업테스트입니다. end<br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+	
+  
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"> </script> 
+	<script>
+		var pop;
+		$(function(){
+			//해당페이지사용되는 스크립트
+			pop = new ModalPopup(".pop1" , 1000); // 선택자 , z-index 10 단위로 증가
+			//pop.open();
+		})
+	</script>
+</body>
+
+</html>
+

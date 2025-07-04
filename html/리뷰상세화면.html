@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <title>리뷰</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                -webkit-tap-highlight-color: transparent;
+            }
+            @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css');
+
+            body {
+                font-family: 'Pretendard';
+                background-color: #fff;
+                color: white;
+                overflow-x: hidden;
+                width: 100vw;
+                height: 100vh;
+            }
+
+           
+            .review_detail_popup {
+                position: relative;
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                background-color: #2d3436;
+                flex-direction: column;
+            }
+            /* 헤더 */
+            .rdp_header {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                background-color: #2d3436;
+                padding: 15px 20px;
+                align-items: center;
+                gap: 15px;
+                top: 0;
+                z-index: 100;
+            }
+
+            .back-arrow {
+                position: absolute;
+                display: block;
+                left: 20px;
+                width: 50px;
+                height: 32px;
+                background: no-repeat left center/24px 24px url('../images/review/chevron_left.svg');
+
+            }
+
+            .rdp_header-title {
+                color: #FFF;
+                text-align: center;
+                font-feature-settings: 'ss10' on;
+
+                /* Body 1/semibold */
+                font-family: Pretendard;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 162.5%;
+                /* 26px */
+                letter-spacing: -0.16px;
+            }
+
+            /* 메인 컨텐츠 */
+            .rdp_content {
+                /* flex: 1; */
+                /* overflow-y: auto; */
+                -webkit-overflow-scrolling: touch;
+            }
+
+            /* 제품 이미지 영역 */
+            .rdp-product-section {
+                background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+                padding: 0;
+                text-align: center;
+                position: relative;
+                height: 500px;
+            }
+
+            .pop-product-swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .pop-product-swiper .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+            }
+
+            .pop-product-swiper .swiper-slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .pop-product-swiper .swiper-pagination {
+                bottom: 20px;
+            }
+
+            .pop-product-swiper .swiper-pagination-bullet {
+                background: rgba(255, 255, 255, 0.5);
+                opacity: 1;
+            }
+
+            .pop-product-swiper .swiper-pagination-bullet-active {
+                background: #00cec9;
+            }
+
+
+
+            /* 리뷰 섹션 */
+            .rdp-review-section {
+                background-color: #2d3436;
+                padding: 15px 16px 53px;
+            }
+
+            .reviewer-info {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 15px;
+            }
+
+            .reviewer-avatar {
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+            }
+
+            .reviewer-details {
+                flex: 1;
+            }
+
+            .rdp-review-text {
+                padding: 10px 16px;
+                box-sizing: border-box;
+                color: #FFF;
+                font-feature-settings: 'ss10' on;
+                font-family: Pretendard;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 157.14%;
+                /* 22px */
+                letter-spacing: -0.14px;
+            }
+
+            /* 스크롤바 숨김 */
+            .rdp_content::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* iOS 스타일 스크롤 */
+            .rdp_content {
+                scroll-behavior: smooth;
+            }
+
+            .review_detail_popup .review-header-info {
+                display: flex;
+                justify-content: left;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .review_detail_popup .review-header-info .left {
+                flex: 0 0 36px;
+            }
+
+            .review_detail_popup .review-header-info .left .user_profile {
+                display: flex;
+                align-items: center;
+                width: 36px;
+                height: 41px;
+            }
+
+            .review_detail_popup .review-header-info .left .user_profile img {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            .review_detail_popup .review-header-info .right .reviewer-name {
+                color: #fff;
+                text-align: center;
+                font-feature-settings: "ss10" on;
+                font-family: Pretendard;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 157.14%;
+                /* 22px */
+                letter-spacing: -0.14px;
+            }
+
+            .review_detail_popup .review-header-info .right .rcase {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .review_detail_popup .review-header-info .review-date {
+                position: absolute;
+                right: 16px;
+                color: #E6E8EC;
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 13px;
+                letter-spacing: -0.13px;
+            }
+
+            .review_detail_popup .review-header-info .review-stars {
+                display: inline-flex;
+                gap: 1px;
+            }
+
+            .review_detail_popup .review-header-info .review-star {
+                font-size: 0;
+                position: relative;
+                display: inline-block;
+                width: 15.32px;
+                height: 15.32px;
+                margin-right: 1px;
+                background: no-repeat center/15.32px 15.32px url("../images/review/sstar_on.svg");
+            }
+
+            .review_detail_popup .review-header-info .review-star.empty {
+                background: no-repeat center/15.32px 15.32px url("../images/review/sstar_dark_off.svg");
+            }
+
+            .review_detail_popup .review-header-info .review-star:last-child {
+                margin-right: 0;
+            }
+            .swiper-pagination-bullet{opacity: 0.8 !important;}
+            .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color: #2d3436;}
+        </style>
+    </head>
+    <body>
+        <div class="review_detail_popup">
+            <!-- 헤더 --> 
+            <div class="rdp_header">
+                <a class="back-arrow" href="#back"></a>
+                <div class="rdp_header-title">리뷰</div>
+            </div>
+
+            <!-- 메인 컨텐츠 -->
+            <div class="rdp_content">
+                <!-- 제품 이미지 영역 -->
+                <div class="rdp-product-section">
+                    <div class="swiper pop-product-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://placehold.co/375x500?text=visual1" alt="제품 이미지 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://placehold.co/375x500?text=visual2" alt="제품 이미지 2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://placehold.co/375x500?text=visual3" alt="제품 이미지 3">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- 리뷰 섹션 -->
+                <div class="rdp-review-section">
+
+                    <div class="review-header-info">
+                        <div class="left">
+                            <p class="user_profile"><img src="https://placehold.co/36x36/F2F3F5/png" alt=""></p>
+                        </div>
+                        <div class="right">
+                            <span class="reviewer-name">정*님</span>
+                            <div class="rcase">
+                                <div class="review-stars">
+                                    <span class="review-star"></span>
+                                    <span class="review-star"></span>
+                                    <span class="review-star"></span>
+                                    <span class="review-star"></span>
+                                    <span class="review-star empty"></span>
+                                </div>
+                                <span class="review-date">2023.05.03</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rdp-review-text">
+                        정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다. 매일 가족들과 함께 사용하고 있으며, 퇴근 후 편안한 시간을 보내고 있습니다. 몸과 마음이 모두 편해지는 기분이 드는 것 같습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+        <script>
+            // Swiper 초기화 - 슬라이드가 하나 이상일 때만 활성화
+            const swiperWrapper = document.querySelector('.rdp-product-section .swiper-wrapper');
+            const slides = swiperWrapper.querySelectorAll('.rdp-product-section .swiper-slide');
+
+            let productSwiper = null;
+
+            if (slides.length > 1) {
+                productSwiper = new Swiper('.pop-product-swiper', {
+                    loop: true,
+                    pagination: {
+                        el: '.rdp-product-section .swiper-pagination',
+                        clickable: true,
+                    },
+                    effect: 'slide',
+                    speed: 500,
+                    touchRatio: 1,
+                    touchAngle: 20,
+                    grabCursor: true,
+                });
+            } else {
+                // 슬라이드가 1개면 페이지네이션 숨기기
+                const pagination = document.querySelector('.rdp-product-section .swiper-pagination');
+                if (pagination) {
+                    pagination.style.display = 'none';
+                }
+
+                // 자동재생 및 터치 기능 비활성화
+                const swiperContainer = document.querySelector('.pop-product-swiper');
+                swiperContainer.style.touchAction = 'pan-y';
+            }
+
+            // 터치 스크롤 개선
+            document.addEventListener('touchstart', function (e) {
+                if (e.touches.length > 1) {
+                    e.preventDefault();
+                }
+            });
+
+
+        </script>
+    </body>
+</html>

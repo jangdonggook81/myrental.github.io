@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰쓰기</title>
+    <style>
+        /* SCSS 컴파일된 CSS */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          background-color: #f8f9fa;
+          color: #333;
+          line-height: 1.5;
+        }
+
+        .rwa_container {
+          max-width: 414px;
+          margin: 0 auto;
+          background-color: white;
+          min-height: 100vh;
+          position: relative;
+        }
+
+        .rwa_header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 16px 20px;
+          border-bottom: 1px solid #e9ecef;
+          background-color: white;
+        }
+        .rwa_header__back-btn {
+          background: none;
+          border: none;
+          font-size: 18px;
+          color: #666;
+          cursor: pointer;
+        }
+        .rwa_header__title {
+          font-size: 18px;
+          font-weight: 600;
+          color: #333;
+        }
+        .rwa_header__close {
+          background: none;
+          border: none;
+          font-size: 16px;
+          color: #666;
+          cursor: pointer;
+        }
+
+        .product-info {
+          padding: 20px;
+          border-bottom: 8px solid #f8f9fa;
+        }
+        .product-info__container {
+          display: flex;
+          gap: 12px;
+        }
+        .product-info__image {
+          width: 60px;
+          height: 60px;
+          background-color: #e9ecef;
+          border-radius: 8px;
+          flex-shrink: 0;
+        }
+        .product-info__details h3 {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 4px;
+        }
+        .product-info__details .name {
+          font-size: 16px;
+          color: #333;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+        .product-info__details .price {
+          font-size: 16px;
+          color: #007bff;
+          font-weight: 600;
+        }
+
+        .rwa-rating-section {
+          padding: 24px 20px;
+          border-bottom: 8px solid #f8f9fa;
+        }
+        .rwa-rating-section__title {
+          font-size: 18px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 16px;
+        }
+        .rwa-rating-section__subtitle {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 20px;
+        }
+        .rwa-rating-section__stars {
+          display: flex;
+          gap: 8px;
+          justify-content: center;
+        }
+        .rwa-rating-section__stars .star {
+          font-size: 32px;
+          color: #ddd;
+          cursor: pointer;
+          transition: color 0.2s ease;
+        }
+        .rwa-rating-section__stars .star.active {
+          color: #ffc107;
+        }
+        .rwa-rating-section__stars .star:hover {
+          color: #ffc107;
+        }
+
+        .rwa-photo-section {
+          padding: 24px 20px;
+          border-bottom: 8px solid #f8f9fa;
+        }
+        .rwa-photo-section__title {
+          font-size: 16px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 12px;
+        }
+        .rwa-photo-section__notice {
+          background-color: #fff3cd;
+          padding: 12px;
+          border-radius: 8px;
+          margin-bottom: 16px;
+        }
+        .rwa-photo-section__notice .icon {
+          color: #856404;
+          margin-right: 8px;
+        }
+        .rwa-photo-section__notice .text {
+          font-size: 12px;
+          color: #856404;
+        }
+        .rwa-photo-section__upload {
+          display: flex;
+          gap: 12px;
+          overflow-x: auto;
+          padding: 4px 0;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+        .rwa-photo-section__upload::-webkit-scrollbar {
+          height: 4px;
+        }
+        .rwa-photo-section__upload::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 2px;
+        }
+        .rwa-photo-section__upload::-webkit-scrollbar-thumb {
+          background: #ddd;
+          border-radius: 2px;
+        }
+        .rwa-photo-section__upload::-webkit-scrollbar-thumb:hover {
+          background: #bbb;
+        }
+        .rwa-photo-section__upload .upload-btn {
+          width: 80px;
+          height: 80px;
+          border: 2px dashed #ddd;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background: none;
+          cursor: pointer;
+          color: #666;
+          flex-shrink: 0;
+          transition: border-color 0.2s ease;
+          order: -1;
+        }
+        .rwa-photo-section__upload .upload-btn:hover {
+          border-color: #007bff;
+        }
+        .rwa-photo-section__upload .upload-btn.hidden {
+          display: none;
+        }
+        .rwa-photo-section__upload .upload-btn .icon {
+          font-size: 24px;
+          margin-bottom: 4px;
+        }
+        .rwa-photo-section__upload .upload-btn .count {
+          font-size: 12px;
+        }
+        .rwa-photo-section__upload .photo-preview {
+          width: 80px;
+          height: 80px;
+          background-color: #e9ecef;
+          border-radius: 8px;
+          background-size: cover;
+          background-position: center;
+          flex-shrink: 0;
+          position: relative;
+          overflow: hidden;
+        }
+        .rwa-photo-section__upload .photo-preview .delete-btn {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+          width: 20px;
+          height: 20px;
+          background: rgba(0, 0, 0, 0.6);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          font-size: 12px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+        }
+        .rwa-photo-section__upload .photo-preview:hover .delete-btn {
+          opacity: 1;
+        }
+        .rwa-photo-section__upload .photo-preview img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        .rwa-review-section {
+          padding: 24px 20px;
+        }
+        .rwa-review-section__title {
+          font-size: 16px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .rwa-review-section__badges {
+          display: flex;
+          gap: 8px;
+        }
+        .rwa-review-section__badge {
+          padding: 4px 8px;
+          border-radius: 12px;
+          font-size: 12px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          transition: opacity 0.3s ease;
+        }
+        .rwa-review-section__badge--photo {
+          background-color: #333;
+          color: white;
+        }
+        .rwa-review-section__badge--text {
+          background-color: #007bff;
+          color: white;
+        }
+        .rwa-review-section__badge .icon {
+          font-size: 10px;
+        }
+        .rwa-review-section__subtitle {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 16px;
+        }
+        .rwa-review-section__textarea {
+          width: 100%;
+          min-height: 120px;
+          padding: 16px;
+          border: 1px solid #e9ecef;
+          border-radius: 8px;
+          font-size: 16px;
+          font-family: inherit;
+          resize: vertical;
+          background-color: #fafafa;
+          position: relative;
+        }
+        .rwa-review-section__textarea::placeholder {
+          color: #999;
+        }
+        .rwa-review-section__char-count {
+          text-align: right;
+          margin-top: 8px;
+          font-size: 12px;
+          color: #666;
+        }
+
+        .submit-section {
+          position: fixed;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          max-width: 414px;
+          padding: 16px 20px;
+          background-color: white;
+          border-top: 1px solid #e9ecef;
+        }
+        .submit-section__btn {
+          width: 100%;
+          padding: 16px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background-color 0.2s ease;
+        }
+        .submit-section__btn:hover {
+          background-color: #0056b3;
+        }
+        .submit-section__btn:disabled {
+          background-color: #e9ecef;
+          color: #999;
+          cursor: not-allowed;
+        }
+
+        .rwa-content-wrapper {
+          padding-bottom: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rwa_container">
+        <div class="rwa_header">
+            <button class="rwa_header__back-btn">‹</button>
+            <h1 class="rwa_header__title">리뷰쓰기</h1>
+            <button class="rwa_header__close">닫기</button>
+        </div>
+
+        <div class="rwa-content-wrapper">
+            <section class="product-info">
+                <div class="product-info__container">
+                    <div class="product-info__image"></div>
+                    <div class="product-info__details">
+                        <h3>써니</h3>
+                        <div class="name">플레인큰다그 A1 도살부터 10kg</div>
+                        <div class="price">최저가격 38,800원</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="rwa-rating-section">
+                <h2 class="rwa-rating-section__title">별점을 눌러 만족도를 알려주세요</h2>
+                <p class="rwa-rating-section__subtitle">만족도</p>
+                <div class="rwa-rating-section__stars">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+            </section>
+
+            <section class="rwa-photo-section">
+                <h2 class="rwa-photo-section__title">사진 업로드</h2>
+                <div class="rwa-photo-section__notice">
+                    <span class="icon">💡</span>
+                    <span class="text">제품 리뷰 작성시간 실물과 다산점의 반가</span>
+                </div>
+                <div class="rwa-photo-section__upload" id="photoUpload">
+                    <button class="upload-btn" id="uploadBtn">
+                        <span class="icon">📷</span>
+                        <span class="count">0/5</span>
+                    </button>
+                    <div class="photo-preview" ><img src="http://placehold.co/104x104" alt="Preview"><button class="delete-btn">×</button></div>
+                </div>
+            </section>
+
+            <section class="rwa-review-section">
+                <div class="rwa-review-section__title">
+                    <span>리뷰를 작성해주세요</span>
+                    <div class="rwa-review-section__badges">
+                        <div class="rwa-review-section__badge rwa-review-section__badge--photo" id="photoBadge">
+                            <span class="icon">✓</span>
+                            <span>사진첨부</span>
+                        </div>
+                        <div class="rwa-review-section__badge rwa-review-section__badge--text" id="textBadge">
+                            <span class="icon">✓</span>
+                            <span>80자 이상</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="rwa-review-section__subtitle">시중에는 어떤 상품인지 자세하게 알려 주신 원하신 하시나요?<br>
+                설명 부탁합니다 베르중 여행의 시게</p>
+                <textarea class="rwa-review-section__textarea" id="reviewTextarea" placeholder="리뷰를 작성해주세요..."></textarea>
+                <div class="rwa-review-section__char-count">
+                    <span id="charCount">0</span>자
+                </div>
+            </section>
+        </div>
+
+        <div class="submit-section">
+            <button class="submit-section__btn" disabled>등록</button>
+        </div>
+    </div>
+
+    <script>
+        // 별점 기능
+        const stars = document.querySelectorAll('.star');
+        const submitBtn = document.querySelector('.submit-section__btn');
+        let currentRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                currentRating = parseInt(this.dataset.rating);
+                updateStars();
+                updateSubmitButton();
+            });
+
+            star.addEventListener('mouseover', function() {
+                const hoverRating = parseInt(this.dataset.rating);
+                highlightStars(hoverRating);
+            });
+        });
+
+        document.querySelector('.rwa-rating-section__stars').addEventListener('mouseleave', function() {
+            highlightStars(currentRating);
+        });
+
+        function updateStars() {
+            highlightStars(currentRating);
+        }
+
+        function highlightStars(rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+        
+    </script>
+</body>
+</html>

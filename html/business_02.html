@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="800" />
+		<meta property="og:site_name" content="" />
+		<title>사업자/B2B관 견적신청</title>
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../scss/style.css" />
+
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="pop_area" style="display:none;">
+				<div class="type01">
+					<div class="top">
+						<p class="t1">신청서가 접수되었습니다.</p>
+						<p class="t2">담당자가 빠른 시간안에 연락드리겠습니다.</p>
+					</div>
+					<div class="bottom">
+						<a href="#확인" onclick="$('.pop_area').hide(); return false">확인</a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 주요 본문 -->
+			<main id="container">
+				<div class="businessApply">
+					<div class="title_case">
+						<div class="t_box">
+							<p class="t1">B2B 사업자 견적 신청</p>
+							<p class="t2">사업자 정보를 남겨주시면 상담원이 연락드립니다.</p>
+							<p class="t3">상담가능시간 평일 10:00~18:00 (점심시간 12:00~13:00)</p>
+						</div>
+						<a class="btn_close" href="#close"><span class="ir_su">닫기</span></a>
+					</div>
+					<div class="middle">
+						<div class="title_line">
+							<p class="t1">정보입력</p>
+							<p class="t2"><span>*</span>필수입력</p>
+						</div>
+						<div class="type_case">
+							<div class="inner">
+								<div class="b2b_type_box">
+									<p class="tit">사업자 유형<span>*</span></p>
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree" > 
+											<label for="agree"></label>
+										</p>
+										<p class="wordCase">법인 사업자</p>
+									</div>
+									<div class="ques">
+										<p class="checkCase">
+											<input type="checkbox" id="agree">
+											<label for="agree"></label>
+										</p>
+										<p class="wordCase">개인 사업자</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="name_case">
+							<p class="tit">회사명<span>*</span></p>
+							<p class="inp_case">
+								<input type="text" placeholder="회사명">
+							</p>
+						</div>
+						<div class="name_case">
+							<p class="tit">사업자 번호<span>*</span></p>
+							<p class="inp_case">
+								<input type="text" placeholder="사업자 번호">
+							</p>
+						</div>
+						<div class="name_case">
+							<p class="tit">담당자 이름<span>*</span></p>
+							<p class="inp_case">
+								<input type="text" placeholder="담당자 이름">
+							</p>
+						</div>
+						<div class="phone_number_case">
+							<p class="tit">휴대폰 번호<span>*</span></p>
+							<div class="number_box">
+								<p class="select_case">
+									<select name="" class="option_select">
+										<option value="010">010</option>
+										<option value="011">011</option>
+										<option value="070">070</option>
+										<option value="090">090</option>
+									</select>
+								</p>
+								<p class="hyphen">-</p>
+								<p class="inp_case">
+									<input type="text">
+								</p>
+								<p class="hyphen">-</p>
+								<p class="inp_case">
+									<input type="text">
+								</p>
+							</div>
+						</div>
+						<div class="email_case">
+							<p class="tit">이메일<span>*</span></p>
+							<div class="number_box">
+
+								<p class="inp_case">
+									<input type="text">
+								</p>
+								<p class="hyphen">@</p>
+								<p class="inp_case">
+									<input type="text">
+								</p>
+								<p class="select_case">
+									<select name="" class="option_select">
+										<option value="직접입력">직접입력</option>
+										<option value="naver.com">네이버</option>
+										<option value="kakao.com">카카오</option>
+										<option value="daum.net">다음</option>
+									</select>
+								</p>
+							</div>
+						</div>
+						<div class="msg_case">
+							<p class="tit">비고</p>
+							<div class="inp_textarea">
+								<span class="word">0/200자</span>
+								<textarea name="" id="" placeholder="궁금한 내용을 적어주세요."></textarea>
+							</div>
+						</div>
+						<div class="agree_area">
+							<div class="ques">
+								<p class="checkCase">
+									<input type="checkbox" id="agree">
+									<label for="agree"></label>
+								</p>
+								<p class="wordCase">
+									<span class="color_point">[필수]</span> 개인정보 수집 및 이용에 관한 사항에 동의함
+								</p>
+							</div>
+							<a class="btn_all_view" href="#전문보기">전문보기</a>
+						</div>
+						<div class="btn_case">
+							<a class="btn_apply" href="#btn" onclick="$('.pop_area').show(); return false">신청하기</a>
+						</div>
+					</div>
+				</div>
+			</main>
+
+
+		</div>
+		<!-- // wrap -->
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"> </script>
+
+	</body>
+
+</html>

@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:site_name" content="" />
+        <title>상품상세페이지</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../scss/style.css" />
+
+    </head>
+
+    <body>
+        <div id="wrap">
+
+            <!-- include header(로고, 검색, 로그인, 장바구니) -->
+            <header id="header"></header>
+
+            <!-- 주요 본문 -->
+            <main id="container">
+                <div class="productPageDetail">
+                    <div class="top">
+                        <p class="product_name">냉장고</p>
+                        <div class="top_visual">
+                            <div class="inner">
+                                <div class="main_swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#1"><img src="../images/product_page/product_deteil_top_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#2"><img src="../images/product_page/product_deteil_top_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#3"><img src="../images/product_page/product_deteil_top_img.png" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#4"><img src="../images/product_page/product_deteil_top_img.png" alt=""></a>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_info_case">
+                            <p class="tit_brand">삼성</p>
+                            <p class="tit_brand_product">비스포크 그랑데 AI 드럼세탁기 10kg + 건조기 9kg 그레이지</p>
+                            <p class="tit_brand_code">WW10TP34DSG+DV90T5740SE</p>
+                        </div>
+                        <!-- 2025.06.29 디테일상세 페이지에 .detail_page 클래스 추가 -->
+                        <p class="sticker_bottom detail_page">
+                            <span class="ico_box3" style="width:auto; color:#fff; background:#0E8282">
+                                <i class="icon_case" style="background-image: url(../images/common/icon_deteil_gift.svg);"></i>최저가</span>
+                            <span class="ico_box3" style="width:auto; color:#fff; background:#0E8282">최저가보장</span>
+                        </p>
+                        <!-- //2025.06.29 -->
+                        <div class="month_period">
+                            <p class="tit">렌탈약정기간</p>
+                            <div class="choice_case">
+                                <label class="btn">
+                                    <input type="radio" name="month_period_1">
+                                    <span class="label">10개월</span>
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="month_period_1">
+                                    <span class="label">14개월</span>
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="month_period_1">
+                                    <span class="label">88개월</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="color_area">
+                            <p class="tit">컬러</p>
+                            <div class="choice_case">
+                                <p class="tit">미드나잇블루</p>
+                                <label class="btn">
+                                    <input type="radio" name="month_period_2">
+                                    <!-- white 흰색 -->
+                                    <span class="label whtie"></span>
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="month_period_2">
+                                    <!-- 흰색이 아닐때 other 클래스추가 , background-color 값 -->
+                                    <span class="label other" style="background-color: #517A7F;"></span>
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="month_period_2">
+                                    <span class="label other" style="background-color: #771C1C;"></span>
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="month_period_2">
+                                    <span class="label other" style="background-color: #9E9E9E;"></span>
+                                </label>
+                                <label class="btn">
+                                    <input type="radio" name="month_period_2">
+                                    <span class="label other" style="background-color: #9E9E9E;"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card_area">
+                            <p class="tit">할인카드</p>
+                            <div class="choice_case">
+                                <select name="" id="">
+                                    <option style="display: none;" disabled selected>할인카드</option>
+                                    <option value="">롯데 30만원 사용시 15,000원 할인1 가나다라마바사</option>
+                                    <option value="">롯데 30만원 사용시 15,000원 할인2</option>
+                                    <option value="">롯데 30만원 사용시 15,000원 할인3</option>
+                                    <option value="">롯데 30만원 사용시 15,000원 할인4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="result_price">
+                            <p class="price_case_01">
+                                <span class="t1">월렌탈료</span>
+                                <span class="t2">월 54,000원</span>
+                            </p>
+                            <p class="price_case_02">
+                                <span class="t1">카드 할인</span>
+                                <span class="t2">-14,000원</span>
+                            </p>
+                            <p class="price_case_03">
+                                <span class="t1">제휴카드 할인가</span>
+                                <span class="t2">월 36,800원</span>
+                            </p>
+                        </div>
+                        <div class="btn_case">
+                            <a class="btn_cart" href="#a">장바구니</a>
+                            <a class="btn_rental_ok" href="#b">렌탈신청</a>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <div class="tab_case">
+                            <ul>
+                                <li>
+                                    <a class="active" href="#a">리뷰</a>
+                                </li>
+                                <li>
+                                    <a href="#a">상품정보</a>
+                                </li>
+                                <li>
+                                    <a href="#a">공통정보</a>
+                                </li>
+                                <li>
+                                    <a href="#a">요약정보</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 2025.06.29 리뷰영역 tabs 1개추가  -->
+                        <div class="tabs tab01" style="display: block;">
+                            <div class="tab01_inner">
+
+                                <!-- Promotion Banner -->
+                                <div class="promo-banner">
+                                    <h2 class="tit1">포토리뷰 이벤트</h2>
+                                    <p class="tit2">리뷰업로드 시 적립금 100% 지급!</p>
+                                </div>
+
+                                <!-- Rating Section -->
+                                <div class="rating-section">
+                                    <div class="stars">
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star"></span>
+                                        <span class="star empty"></span>
+                                        <p class="rating-score">
+                                            <strong class="st_score">4.8</strong>
+                                            <span class="st_total">/(5점)</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="rating-bars">
+                                        <div class="rating-bar">
+                                            <span>5점</span>
+                                            <div class="bar-container">
+                                                <div class="bar-fill" style="width: 90%"></div>
+                                            </div>
+                                            <span>90개</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>4점</span>
+                                            <div class="bar-container">
+                                                <div class="bar-fill" style="width: 60%"></div>
+                                            </div>
+                                            <span>60개</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>3점</span>
+                                            <div class="bar-container">
+                                                <div class="bar-fill" style="width: 0%"></div>
+                                            </div>
+                                            <span>0개</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>2점</span>
+                                            <div class="bar-container">
+                                                <div class="bar-fill" style="width: 0%"></div>
+                                            </div>
+                                            <span>0개</span>
+                                        </div>
+                                        <div class="rating-bar">
+                                            <span>1점</span>
+                                            <div class="bar-container">
+                                                <div class="bar-fill" style="width: 0%"></div>
+                                            </div>
+                                            <span>0개</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Review Header -->
+                                <div class="review-header">
+                                    <p class="review-count">
+                                        <span class="rc_tit">리뷰</span>
+                                        <strong class="rc_count">150</strong>
+                                    </p>
+                                    <a class="sort-button" href="#review_write" onclick="$('.review_write_area').show(); $('body').addClass('modal-open'); return false;">리뷰쓰기</a>
+                                </div>
+
+                                <!-- Review Photos Grid -->
+                                <div class="review-photos">
+                                    <a class="photo" href="#">
+                                        <!-- <span class="add_photo_num">+4</span> -->
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                    </a>
+                                </div>
+
+                                <!-- Review Items -->
+                                <ul class="review-items-case">
+                                    <li class="review-item">
+                                        <div class="review-header-info">
+                                            <div class="left">
+                                                <p class="user_profile"><img src="https://placehold.co/36x36/F2F3F5/png" alt=""></p>
+                                            </div>
+                                            <div class="right">
+                                                <a class="btn_modify" href="#bmod">수정</a>
+                                                <span class="reviewer-name">정*님</span>
+                                                <div class="rcase">
+                                                    <div class="review-stars">
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star empty"></span>
+                                                    </div>
+                                                    <span class="review-date">2023.05.03</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review-options">
+                                            <span class="ro_tit">옵션</span>
+                                            <span class="ro_option">화이트, 화이트</span>
+                                        </div>
+                                        <a class="review-content" href="#" onclick="$('.review_gallery').show(); $('body').addClass('modal-open'); return false;">
+                                            <div class="review-image">
+                                                <span class="add_photo_num">+4</span>
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                            </div>
+                                            <div class="review-text">
+                                                리뷰상세페이지보기  정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                                정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="review-item">
+                                        <div class="review-header-info">
+                                            <div class="left">
+                                                <p class="user_profile"><img src="https://placehold.co/36x36/F2F3F5/png" alt=""></p>
+                                            </div>
+                                            <div class="right">
+                                                <a class="btn_modify" href="#bmod">수정</a>
+                                                <span class="reviewer-name">정*님</span>
+                                                <div class="rcase">
+                                                    <div class="review-stars">
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star empty"></span>
+                                                    </div>
+                                                    <span class="review-date">2023.05.03</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review-options">
+                                            <span class="ro_tit">옵션</span>
+                                            <span class="ro_option">화이트, 화이트</span>
+                                        </div>
+                                        <a class="review-content" href="#reviewcontent">
+                                            <div class="review-image">
+                                                <span class="add_photo_num">+4</span>
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                            </div>
+                                            <div class="review-text">
+                                                정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                                정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="review-item">
+                                        <div class="review-header-info">
+                                            <div class="left">
+                                                <p class="user_profile"><img src="https://placehold.co/36x36/F2F3F5/png" alt=""></p>
+                                            </div>
+                                            <div class="right">
+                                                <a class="btn_modify" href="#bmod">수정</a>
+                                                <span class="reviewer-name">정*님</span>
+                                                <div class="rcase">
+                                                    <div class="review-stars">
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star empty"></span>
+                                                    </div>
+                                                    <span class="review-date">2023.05.03</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review-options">
+                                            <span class="ro_tit">옵션</span>
+                                            <span class="ro_option">화이트, 화이트</span>
+                                        </div>
+                                        <a class="review-content" href="#reviewcontent">
+                                            <div class="review-image">
+                                                <span class="add_photo_num">+4</span>
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                            </div>
+                                            <div class="review-text">
+                                                정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                                정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="review-item">
+                                        <div class="review-header-info">
+                                            <div class="left">
+                                                <p class="user_profile"><img src="https://placehold.co/36x36/F2F3F5/png" alt=""></p>
+                                            </div>
+                                            <div class="right">
+                                                <a class="btn_modify" href="#bmod">수정</a>
+                                                <span class="reviewer-name">정*님</span>
+                                                <div class="rcase">
+                                                    <div class="review-stars">
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star"></span>
+                                                        <span class="review-star empty"></span>
+                                                    </div>
+                                                    <span class="review-date">2023.05.03</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="review-options">
+                                            <span class="ro_tit">옵션</span>
+                                            <span class="ro_option">화이트, 화이트</span>
+                                        </div>
+                                        <a class="review-content" href="#reviewcontent">
+                                            <div class="review-image">
+                                                <span class="add_photo_num">+4</span>
+                                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e0e0e0'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='%23999' text-anchor='middle' dy='4'%3E이미지%3C/text%3E%3C/svg%3E" alt="리뷰 사진">
+                                            </div>
+                                            <div class="review-text">
+                                                정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                                정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다.
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            <!-- Load More Button -->
+                            <div class="load-more">
+                                <a class="lm_btn" href="#addbtn">리뷰 더보기<i class="lm_btn_arr"></i></a>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                    <!-- //2025.06.29 리뷰영역 tabs 1개추가  -->
+                    <div class="tabs tab02">
+                        <div class="inner hide">
+                            <img src="//tlpartner.ecn.cdn.infralab.net/data/editor/rentalworld/2105/886c5c10ecb700cab9209ffe52d852a0_1621314756_2474.jpg">
+                        </div>
+                        <a class="btn_img_add" href="#더보기" onclick="$(this).parent().find('.inner').removeClass('hide'); $(this).hide(); return false;">더보기</a>
+                    </div>
+                    <div class="tabs tab03">
+                        <div class="inner">
+                            공통정보
+                        </div>
+                    </div>
+                    <div class="tabs tab04">
+                        <div class="inner">
+                            요약정보
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <!-- 추천상품 pt10 추가 간격조정-->
+                    <div class="md_pick pt10">
+                        <div class="tit_case">
+                            <p class="t1">함께 보면 좋은 제품추천</p>
+                        </div>
+                        <div class="md_swiper_case">
+                            <div class="inner">
+                                <div class="md_swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- 최소5개 등록 -->
+                                        <div class="swiper-slide">
+                                            <a href="#a">
+                                                <div class="product_img">
+                                                    <img src="../images/home/home_md_pick_sample.png" alt="">
+                                                </div>
+                                                <div class="info_case">
+                                                    <p class="t1_brand">삼성</p>
+                                                    <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                    <div class="price_case">
+                                                        <p class="origin_case">월렌탈료<span class="price">55,800원</span></p>
+                                                        <p class="sale_case">할인적용시<span class="price">38,800원</span></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#a">
+                                                <div class="product_img">
+                                                    <img src="../images/home/home_md_pick_sample.png" alt="">
+                                                </div>
+                                                <div class="info_case">
+                                                    <p class="t1_brand">삼성</p>
+                                                    <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                    <div class="price_case">
+                                                        <p class="origin_case">월렌탈료<span class="price">55,800원</span></p>
+                                                        <p class="sale_case">할인적용시<span class="price">38,800원</span></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#a">
+                                                <div class="product_img">
+                                                    <img src="../images/home/home_md_pick_sample.png" alt="">
+                                                </div>
+                                                <div class="info_case">
+                                                    <p class="t1_brand">삼성</p>
+                                                    <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                    <div class="price_case">
+                                                        <p class="origin_case">월렌탈료<span class="price">55,800원</span></p>
+                                                        <p class="sale_case">할인적용시<span class="price">38,800원</span></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#a">
+                                                <div class="product_img">
+                                                    <img src="../images/home/home_md_pick_sample.png" alt="">
+                                                </div>
+                                                <div class="info_case">
+                                                    <p class="t1_brand">삼성</p>
+                                                    <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                    <div class="price_case">
+                                                        <p class="origin_case">월렌탈료<span class="price">55,800원</span></p>
+                                                        <p class="sale_case">할인적용시<span class="price">38,800원</span></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#a">
+                                                <div class="product_img">
+                                                    <img src="../images/home/home_md_pick_sample.png" alt="">
+                                                </div>
+                                                <div class="info_case">
+                                                    <p class="t1_brand">삼성</p>
+                                                    <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                    <div class="price_case">
+                                                        <p class="origin_case">월렌탈료<span class="price">55,800원</span></p>
+                                                        <p class="sale_case">할인적용시<span class="price">38,800원</span></p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+            </main>
+
+            <!-- include footer -->
+            <footer id="footer"></footer>
+        </div>
+        <!-- // wrap -->
+
+
+
+        <!-- 2025.06.29 리뷰쓰기 -->
+         <!--  class="review_write_area pc"  pc class 추가 -->
+        <article class="review_write_area " style="display: none ;">
+            <div class="review_write_popup">
+                <div class="rwa_container">
+                    <div class="rwa_header">
+                        <a class="rwa_header__back-btn" href="#" onclick="$(this).parent().parent().parent().parent().hide(); $('body').removeClass('modal-open'); return false;"><span class="ir_su">닫기</span></a>
+                        <h1 class="rwa_header__title">리뷰쓰기</h1>
+                        <!-- 클래스 on 추가 / 제거 -->
+                        <a class="rwa_header__complete on" href="#complete">완료</a>
+                        <a class="rwa_header__close-x" href="#closeX"></a>
+                    </div>
+            
+                    <div class="rwa-content-wrapper">
+                        <section class="product-info">
+                            <div class="product-info__container">
+                                <div class="product-info__image">
+                                    <img src="http://placehold.co/80x80" alt="">
+                                </div>
+                                <div class="product-info__details">
+                                    <h3>써니</h3>
+                                    <div class="name">플레인큰다그 A1 도살부터 10kg </div>
+                                    <div class="option">옵션: 화이트 화이트</div>
+                                    <div class="price">최저가격 38,800원</div>
+                                </div>
+                            </div>
+                        </section>
+            
+                        <section class="rwa-rating-section">
+                            <h2 class="rwa-rating-section__title">별점을 눌러 만족도를 알려주세요</h2>
+                            <div class="rwa-rating-section__case">
+                                <p class="rwa-rating-section__subtitle">만족도</p>
+                                <div class="rwa-rating-section__stars">
+                                    <span class="star-check" data-rating="1"></span>
+                                    <span class="star-check" data-rating="2"></span>
+                                    <span class="star-check" data-rating="3"></span>
+                                    <span class="star-check" data-rating="4"></span>
+                                    <span class="star-check" data-rating="5"></span>
+                                </div>
+                            </div>
+                        </section>
+            
+                        <section class="rwa-photo-section">
+                            <h2 class="rwa-photo-section__title">사진 업로드 <span class="sub_title">최대 5개</span></h2>
+                            <div class="rwa-photo-section__notice">
+                                <span class="icon"></span>
+                                <span class="text">제품 리뷰 작성시간 실물과 다산점의 반가</span>
+                            </div>
+                            <div class="rwa-photo-section__upload" id="photoUpload">
+                                <button class="upload-btn" id="uploadBtn">
+                                    <span class="icon">
+                                        <img src="../images/review/rw_cam_icon.svg" alt="">
+                                    </span>
+                                    <span class="count">0/5</span>
+                                </button>
+                                <div class="photo-preview" >
+                                    <img src="http://placehold.co/104x104" alt="Preview">
+                                    <button class="delete-btn">×</button>
+                                </div>
+                                <div class="photo-preview" >
+                                    <img src="http://placehold.co/104x104" alt="Preview">
+                                    <button class="delete-btn">×</button>
+                                </div>
+                                <div class="photo-preview" >
+                                    <img src="http://placehold.co/104x104" alt="Preview">
+                                    <button class="delete-btn">×</button>
+                                </div>
+                                <div class="photo-preview" >
+                                    <img src="http://placehold.co/104x104" alt="Preview">
+                                    <button class="delete-btn">×</button>
+                                </div>
+                                <div class="photo-preview" >
+                                    <img src="http://placehold.co/104x104" alt="Preview">
+                                    <button class="delete-btn">×</button>
+                                </div>
+                            </div>
+                        </section>
+            
+                        <section class="rwa-review-section">
+                            <div class="rwa-review-section__title">
+                                <span>리뷰를 작성해주세요</span>
+                                <div class="rwa-review-section__badges">
+                                    <!-- on 클래스 추가 -->
+                                    <div class="rwa-review-section__badge rwa-review-section__badge--photo on" id="photoBadge">
+                                        <span class="icon"></span>
+                                        <span>사진첨부</span>
+                                    </div>
+                                    <div class="rwa-review-section__badge rwa-review-section__badge--text " id="textBadge">
+                                        <span class="icon"></span>
+                                        <span>80자 이상</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea class="rwa-review-section__textarea" id="reviewTextarea" placeholder="사용하며 만족스러웠 점과 아쉬운 점은 무엇인가요?&#13;&#10;설치 과정이나 배송은 어땠나요?"></textarea>
+                            <div class="rwa-review-section__char-count">
+                                <span id="charCount">89</span>자
+                            </div>
+                        </section>
+                    </div>
+                    <!-- on 클래스 추가 -->
+                    <div class="submit-section on">
+                        <button class="submit-section__btn">작성 완료하기</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- //2025.06.29 리뷰쓰기 -->
+
+
+        <!-- 2025.06.29 리뷰세부화면 -->
+        <!--  class="review_gallery pc"  pc class 추가 -->
+        <article class="review_gallery" style="display: none;">
+            <div class="review_detail_popup">
+                <!-- 헤더 --> 
+                <div class="rdp_header">
+                    <a class="back-arrow" href="#" onclick="$(this).parent().parent().parent().hide(); $('body').removeClass('modal-open'); return false;"></a>
+                    <a class="rdp-close-x" href="#closeX"></a>
+                    <div class="rdp_header-title">리뷰</div>
+                </div>
+    
+                <!-- 메인 컨텐츠 -->
+                <div class="rdp_content">
+                    <!-- 제품 이미지 영역 -->
+                    <div class="rdp-product-section">
+                        <div class="swiper pop-product-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://placehold.co/375x500?text=visual1" alt="제품 이미지 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://placehold.co/375x500?text=visual2" alt="제품 이미지 2">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://placehold.co/375x500?text=visual3" alt="제품 이미지 3">
+                                </div>
+                            </div
+                            <!-- pc 에서 좌우버튼 보여주기 -->
+                            <!-- <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div> -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+    
+                    <!-- 리뷰 섹션 -->
+                    <div class="rdp-review-section">
+    
+                        <div class="review-header-info">
+                            <div class="left">
+                                <p class="user_profile"><img src="https://placehold.co/36x36/F2F3F5/png" alt=""></p>
+                            </div>
+                            <div class="right">
+                                <span class="reviewer-name">정*님</span>
+                                <div class="rcase">
+                                    <div class="review-stars">
+                                        <span class="review-star"></span>
+                                        <span class="review-star"></span>
+                                        <span class="review-star"></span>
+                                        <span class="review-star"></span>
+                                        <span class="review-star empty"></span>
+                                    </div>
+                                    <span class="review-date">2023.05.03</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="rdp-review-text">
+                            정이 제품을 사용하면서 삶의 질이 높아졌다고 느끼고 있습니다. 매일 가족들과 함께 사용하고 있으며, 퇴근 후 편안한 시간을 보내고 있습니다. 몸과 마음이 모두 편해지는 기분이 드는 것 같습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- //2025.06.29 리뷰세부화면 -->
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="../js/common.js"> </script>
+
+    </body>
+
+</html>
