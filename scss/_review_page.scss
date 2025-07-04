@@ -1,0 +1,937 @@
+@charset "utf-8";
+
+/* 리뷰상세보기 */
+.review_gallery {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+    overflow-y: auto;
+
+    &.pc {
+        width: 700px;
+        height: 760px;
+        border-radius: 16px;
+
+        .review_detail_popup {
+            background-color: #fff;
+            height: 100%;
+
+            .rdp-review-section {
+                background-color: #ffffff;
+                padding: 16px 20px 36px;
+                box-sizing: border-box;
+
+                .reviewer-name {
+                    color: #191F28 !important
+                }
+
+                .review-date {
+                    color: #8B95A1 !important
+                }
+
+                .rdp-review-text {
+                    margin-top: 8px;
+                    color: #191F28 !important
+                }
+            }
+
+            .rdp_header {
+                background-color: #fff;
+
+                .rdp_header-title {
+                    color: #191F28;
+                }
+
+                .back-arrow {
+                    display: none;
+                }
+
+                .rdp-close-x {
+                    display: block;
+                    pointer-events: visible;
+                    opacity: 1;
+                }
+            }
+
+        }
+
+
+
+        .review-header-info {
+            .review-star {
+                font-size: 0;
+                position: relative;
+                display: inline-block;
+                width: 15.32px;
+                height: 15.32px;
+                margin-right: 1px;
+                background: no-repeat center/15.32px 15.32px url("../images/review/sstar_on.svg");
+
+                &.empty {
+                    background: no-repeat center/15.32px 15.32px url("../images/review/sstar_off.svg");
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
+
+    .review_detail_popup {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background-color: #2d3436;
+        flex-direction: column;
+
+
+        // 헤더
+        .rdp_header {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-color: #2d3436;
+            padding: 15px 20px;
+            align-items: center;
+            gap: 15px;
+            top: 0;
+            z-index: 100;
+
+            .back-arrow {
+                position: absolute;
+                display: block;
+                left: 20px;
+                width: 50px;
+                height: 32px;
+                background: no-repeat left center/24px 24px url('../images/review/chevron_left.svg');
+            }
+
+            .rdp-close-x {
+                pointer-events: none;
+                opacity: 0;
+                position: absolute;
+                display: block;
+                right: 20px;
+                width: 50px;
+                height: 32px;
+                background: no-repeat right center/24px 24px url('../images/review/chevron_right_x.svg');
+            }
+
+            &-title {
+                color: #fff;
+                text-align: center;
+                font-feature-settings: 'ss10' on;
+                font-family: Pretendard;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 162.5%;
+                letter-spacing: -0.16px;
+            }
+        }
+
+        // 메인 컨텐츠
+        .rdp_content {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+
+            // 스크롤바 숨김
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        // 제품 이미지 영역
+        .rdp-product-section {
+            background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+            padding: 0;
+            text-align: center;
+            position: relative;
+            height: 500px;
+        }
+
+        .pop-product-swiper {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .swiper-pagination {
+                bottom: 20px;
+
+                &-bullet {
+                    background: rgba(255, 255, 255, 0.5);
+                    opacity: 1;
+
+                    &-active {
+                        background: #00cec9;
+                    }
+                }
+            }
+
+            /* 이전/다음 버튼 스타일 */
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 58px;
+                height: 58px;
+
+                border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 20px;
+                z-index: 10;
+                cursor: pointer;
+            }
+
+            .swiper-button-prev {
+                left: 10px;
+                /* 왼쪽 버튼 위치 */
+                background: no-repeat center/58px 58px url('../images/review/rg_swiper_left_arr.svg');
+
+                &:after {
+                    display: none;
+                }
+
+            }
+
+            .swiper-button-next {
+                right: 10px;
+                /* 오른쪽 버튼 위치 */
+                background: no-repeat center/62px 58px url('../images/review/rg_swiper_right_arr.svg');
+
+                &:after {
+                    display: none;
+                }
+            }
+
+        }
+
+        // 리뷰 섹션
+        .rdp-review-section {
+            background-color: #2d3436;
+            padding: 15px 16px 53px;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .reviewer-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #00cec9 0%, #0984e3 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .reviewer-details {
+            flex: 1;
+        }
+
+        .rdp-review-text {
+            padding: 10px 0;
+            box-sizing: border-box;
+            color: #fff;
+            font-feature-settings: 'ss10' on;
+            font-family: Pretendard;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 157.14%;
+            letter-spacing: -0.14px;
+        }
+
+        // 리뷰 헤더 정보
+        .review-header-info {
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+            gap: 8px;
+
+            .left {
+                flex: 0 0 36px;
+
+                .user_profile {
+                    display: flex;
+                    align-items: center;
+                    width: 36px;
+                    height: 41px;
+
+                    img {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+            .right {
+                .reviewer-name {
+                    color: #fff;
+                    text-align: center;
+                    font-feature-settings: "ss10" on;
+                    font-family: Pretendard;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 157.14%;
+                    letter-spacing: -0.14px;
+                }
+
+                .rcase {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+
+            .review-date {
+                position: absolute;
+                right: 16px;
+                color: #e6e8ec;
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 13px;
+                letter-spacing: -0.13px;
+            }
+
+            .review-stars {
+                display: inline-flex;
+                gap: 1px;
+            }
+
+            .review-star {
+                font-size: 0;
+                position: relative;
+                display: inline-block;
+                width: 15.32px;
+                height: 15.32px;
+                margin-right: 1px;
+                background: no-repeat center/15.32px 15.32px url("../images/review/sstar_on.svg");
+
+                &.empty {
+                    background: no-repeat center/15.32px 15.32px url("../images/review/sstar_dark_off.svg");
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        // Swiper 페이지네이션 오버라이드
+        .swiper-pagination-bullet {
+            opacity: 0.8 !important;
+
+            &.swiper-pagination-bullet-active {
+                background-color: #2d3436;
+            }
+        }
+    }
+}
+
+/* 리뷰쓰기  */
+.review_write_area {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    color: #fff;
+    overflow-y: auto;
+
+    &.pc {
+        width: 700px;
+        height: 838px;
+        border-radius: 16px;
+        background-color: #fff;
+        .review_write_popup {
+            .rwa_container{
+                min-height: auto;
+            }
+            .rwa_header {
+
+                &__back-btn {
+                    display: none;
+                }
+                &__complete {
+                    display: none;
+                }
+                &__close-x {
+                    display: block;
+                }
+            }
+            .rwa-content-wrapper{
+                padding-bottom:0;
+            }
+            .submit-section{
+                display: flex;
+            }
+        }
+       
+
+    }
+
+    .review_write_popup {
+        position: relative;
+        .rwa_container {
+            position: relative;
+            // max-width: 414px;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+        }
+
+        .rwa_header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background-color: white;
+            height: 56px;
+            box-sizing: border-box;
+
+            &__back-btn {
+                position: absolute;
+                display: block;
+                left: 20px;
+                width: 50px;
+                height: 32px;
+                background: no-repeat left center/24px 24px url('../images/review/chevron_gray_left.svg');
+            }
+
+            &__title {
+                color: var(--color-Text-primay, #191F28);
+                text-align: center;
+                font-family: Pretendard;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 162.5%;
+                /* 26px */
+                letter-spacing: -0.16px;
+            }
+
+            &__complete {
+                position: absolute;
+                right: 20px;
+                display: flex;
+                width: 50px;
+                padding: 4px 8px;
+                color: var(--color-gray-400, #B0B8C1);
+                font-family: Pretendard;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 142.9%;
+                letter-spacing: -0.14px;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+                border-radius: 8px;
+                background: var(--color-gray-50, #F7F7F8);
+
+                // pointer-events: none;
+                &.on {
+                    pointer-events: visible;
+                    color: var(--color-gray-0, #FFF);
+                    background: var(--color-blue, #3182F7);
+                }
+            }
+            &__close-x {
+                // pointer-events: none;
+                position: absolute;
+                display: none;
+                right: 20px;
+                width: 50px;
+                height: 32px;
+                background: no-repeat right center/24px 24px url('../images/review/chevron_right_x.svg');
+            }
+        }
+
+        .product-info {
+            margin-top: 12px;
+            padding: 0 20px;
+
+            &__container {
+                display: flex;
+                gap: 12px;
+            }
+
+            &__image {
+                width: 80px;
+                height: 80px;
+                flex-shrink: 0;
+                border-radius: 4px;
+                border: 1px solid var(--gray-eeeeee, #EEE);
+                overflow: hidden;
+                box-sizing: border-box;
+
+            }
+
+            &__details {
+                h3 {
+                    color: var(--gray-191919, #191919);
+                    font-family: Pretendard;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 127.3%;
+                    letter-spacing: -0.11px;
+                }
+
+                .name {
+                    color: var(--gray-191919, #191919);
+                    font-family: Pretendard;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 133.4%;
+                    letter-spacing: -0.12px;
+                }
+
+                .option {
+                    margin-top: 5px;
+                    color: var(--color-gray-500, #8B95A1);
+                    font-family: Pretendard;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 127.3%;
+                    /* 14.003px */
+                    letter-spacing: -0.11px;
+                }
+
+                .price {
+                    margin-top: 5px;
+                    color: var(--color-main-blue, #3182F7);
+                    font-family: Pretendard;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 138.5%;
+                    letter-spacing: -0.13px;
+                }
+            }
+        }
+
+        .rwa-rating-section {
+            padding: 32px 16px;
+
+            &__title {
+                padding: 4px 0;
+                color: var(--color-gray-900, #191F28);
+                font-family: Pretendard;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 141.2%;
+                /* 24.004px */
+                letter-spacing: -0.17px;
+            }
+
+            &__case {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-top: 8px;
+            }
+
+            &__subtitle {
+                display: inline-block;
+
+                color: var(--color-gray-900, #191F28);
+                font-feature-settings: 'ss10' on;
+
+                /* Label 2/regular */
+                font-family: Pretendard;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 138.5%;
+                /* 18.005px */
+                letter-spacing: -0.13px;
+            }
+
+            &__stars {
+                display: inline-flex;
+                justify-content: center;
+                gap: 3px;
+
+                .star-check {
+                    font-size: 0;
+                    position: relative;
+                    display: inline-block;
+                    width: 36px;
+                    height: 36px;
+                    background: no-repeat center/36px 36px url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none"><path d="M13.9271 1.69004C14.5274 0.473824 16.2617 0.473826 16.8619 1.69005L20.3039 8.66419C20.5422 9.14716 21.003 9.4819 21.5359 9.55935L29.2324 10.6777C30.5746 10.8727 31.1105 12.5221 30.1393 13.4688L24.5701 18.8975C24.1844 19.2734 24.0084 19.815 24.0995 20.3459L25.4142 28.0112C25.6434 29.3479 24.2404 30.3673 23.0399 29.7362L16.156 26.1171C15.6793 25.8665 15.1098 25.8665 14.6331 26.1171L7.74917 29.7362C6.54869 30.3673 5.14562 29.3479 5.37489 28.0112L6.6896 20.3459C6.78064 19.815 6.60465 19.2734 6.21898 18.8975L0.649794 13.4688C-0.321416 12.5221 0.214511 10.8727 1.55669 10.6777L9.25312 9.55935C9.7861 9.4819 10.2468 9.14716 10.4852 8.66419L13.9271 1.69004Z" fill="%23D2D7DC"/></svg>');
+
+                    &.active {
+                        background: no-repeat center/36px 36px url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none"><path d="M13.9271 1.69004C14.5274 0.473824 16.2617 0.473826 16.8619 1.69005L20.3039 8.66419C20.5422 9.14716 21.003 9.4819 21.5359 9.55935L29.2324 10.6777C30.5746 10.8727 31.1105 12.5221 30.1393 13.4688L24.5701 18.8975C24.1844 19.2734 24.0084 19.815 24.0995 20.3459L25.4142 28.0112C25.6434 29.3479 24.2404 30.3673 23.0399 29.7362L16.156 26.1171C15.6793 25.8665 15.1098 25.8665 14.6331 26.1171L7.74917 29.7362C6.54869 30.3673 5.14562 29.3479 5.37489 28.0112L6.6896 20.3459C6.78064 19.815 6.60465 19.2734 6.21898 18.8975L0.649794 13.4688C-0.321416 12.5221 0.214511 10.8727 1.55669 10.6777L9.25312 9.55935C9.7861 9.4819 10.2468 9.14716 10.4852 8.66419L13.9271 1.69004Z" fill="%23FFD050"/></svg>');
+                    }
+
+                    &:hover {
+                        background: no-repeat center/36px 36px url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none"><path d="M13.9271 1.69004C14.5274 0.473824 16.2617 0.473826 16.8619 1.69005L20.3039 8.66419C20.5422 9.14716 21.003 9.4819 21.5359 9.55935L29.2324 10.6777C30.5746 10.8727 31.1105 12.5221 30.1393 13.4688L24.5701 18.8975C24.1844 19.2734 24.0084 19.815 24.0995 20.3459L25.4142 28.0112C25.6434 29.3479 24.2404 30.3673 23.0399 29.7362L16.156 26.1171C15.6793 25.8665 15.1098 25.8665 14.6331 26.1171L7.74917 29.7362C6.54869 30.3673 5.14562 29.3479 5.37489 28.0112L6.6896 20.3459C6.78064 19.815 6.60465 19.2734 6.21898 18.8975L0.649794 13.4688C-0.321416 12.5221 0.214511 10.8727 1.55669 10.6777L9.25312 9.55935C9.7861 9.4819 10.2468 9.14716 10.4852 8.66419L13.9271 1.69004Z" fill="%23FFD050"/></svg>');
+                    }
+                }
+            }
+
+
+
+        }
+
+        .rwa-photo-section {
+            padding: 24px 16px;
+
+            &__title {
+                color: var(--color-gray-900, #191F28);
+                font-family: Pretendard;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 141.2%;
+                /* 24.004px */
+                letter-spacing: -0.17px;
+                padding-bottom: 10px;
+                .sub_title{
+                    padding-left: 8px;
+                    color: var(--color-gray-500, #8B95A1);
+                    font-feature-settings: 'ss10' on;
+
+                    /* Label 2/regular */
+                    font-family: Pretendard;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 138.5%; /* 18.005px */
+                    letter-spacing: -0.13px;
+                }
+            }
+
+            &__notice {
+                display: flex;
+                padding: 15px 16px 10px;
+                height: 38px;
+                align-items: center;
+                box-sizing: border-box;
+                gap: 6px;
+                align-self: stretch;
+                border-radius: 8px;
+                background: rgba(255, 208, 80, 0.15);
+                margin-bottom: 12px;
+
+                .icon {
+                    position: relative;
+                    top: -1px;
+                    width: 25px;
+                    height: 25px;
+                    background: no-repeat center/25px 25px url('../images/review/rw_notice_p_icon.svg');
+
+                }
+
+                .text {
+                    vertical-align: center;
+                    color: #2D2D2D;
+                    font-family: Pretendard;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 138.5%;
+                    /* 18.005px */
+                    letter-spacing: -0.13px;
+                }
+            }
+
+            &__upload {
+                display: flex;
+                gap: 4px;
+                overflow-x: auto;
+                padding: 4px 0;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+
+                &::-webkit-scrollbar {
+                    height: 0;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                    border-radius: 0;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: transparent;
+                    border-radius: 0;
+
+                }
+
+                .upload-btn {
+                    width: 104px;
+                    height: 104px;
+                    border-radius: 8px;
+                    border: 1px solid var(--color-gray-200, #E6E8EC);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background: none;
+                    cursor: pointer;
+
+                    flex-shrink: 0;
+                    transition: border-color 0.2s ease;
+                    order: -1;
+
+                    // &:hover {
+                    //     border-color: #007bff;
+                    // }
+
+                    &.hidden {
+                        display: none;
+                    }
+
+                    .icon {
+                        font-size: 24px;
+                        margin-bottom: 4px;
+                    }
+
+                    .count {
+                        color: var(--color-gray-400, #B0B8C1);
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        /* 142.857% */
+                        letter-spacing: -0.35px;
+                    }
+                }
+
+                .photo-preview {
+                    width: 104px;
+                    height: 104px;
+                    background-color: #e9ecef;
+                    border-radius: 8px;
+                    background-size: cover;
+                    background-position: center;
+                    flex-shrink: 0;
+                    position: relative;
+                    overflow: hidden;
+                    border: 1px solid var(--color-gray-300, #D2D7DC);
+                    box-sizing: border-box;
+
+                    .delete-btn {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -12px;
+                        margin-left: -12px;
+                        width: 24px;
+                        height: 24px;
+                        background: rgba(0, 0, 0, 0.6);
+                        color: white;
+                        border: none;
+                        border-radius: 50%;
+                        font-size: 12px;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: opacity 0.2s ease;
+                        border-radius: 8px;
+
+                        background: no-repeat center/contain url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2225%22 height%3D%2225%22 viewBox%3D%220 0 25 25%22 fill%3D%22none%22%3E%3Cpath fill-rule%3D%22evenodd%22 clip-rule%3D%22evenodd%22 d%3D%22M16.8086 5.66487V5.87769C18.0264 5.98905 19.2392 6.14918 20.4442 6.35768C20.5352 6.37344 20.6222 6.40697 20.7002 6.45634C20.7782 6.50572 20.8458 6.56998 20.899 6.64546C20.9522 6.72093 20.99 6.80615 21.0102 6.89624C21.0305 6.98632 21.0328 7.07952 21.017 7.1705C21.0013 7.26148 20.9678 7.34847 20.9184 7.42649C20.869 7.50452 20.8047 7.57205 20.7293 7.62524C20.6538 7.67843 20.5686 7.71624 20.4785 7.73649C20.3884 7.75675 20.2952 7.75907 20.2042 7.74331L20.0083 7.7105L19.0661 19.9636C19.0118 20.6701 18.6928 21.33 18.1729 21.8115C17.653 22.293 16.9706 22.5605 16.262 22.5605H8.9186C8.21003 22.5605 7.52759 22.293 7.00772 21.8115C6.48785 21.33 6.16886 20.6701 6.11454 19.9636L5.17141 7.7105L4.97547 7.74331C4.79173 7.77514 4.60287 7.73267 4.45044 7.62524C4.298 7.51782 4.19449 7.35424 4.16266 7.1705C4.13084 6.98675 4.17331 6.79789 4.28073 6.64546C4.38815 6.49303 4.55173 6.38951 4.73547 6.35768C5.94041 6.14893 7.15327 5.9888 8.3711 5.87769V5.66487C8.3711 4.19862 9.50829 2.94612 11.0111 2.89831C12.0636 2.86463 13.117 2.86463 14.1695 2.89831C15.6723 2.94612 16.8086 4.19862 16.8086 5.66487ZM11.0561 4.30362C12.0786 4.27092 13.102 4.27092 14.1245 4.30362C14.8305 4.32612 15.4023 4.9205 15.4023 5.66487V5.77081C13.5291 5.65704 11.6506 5.65704 9.77735 5.77081V5.66487C9.77735 4.9205 10.3483 4.32612 11.0561 4.30362ZM10.7233 9.87706C10.7197 9.78472 10.698 9.694 10.6594 9.61005C10.6207 9.52611 10.5659 9.45061 10.4981 9.38784C10.4303 9.32507 10.3508 9.27628 10.2641 9.24424C10.1774 9.2122 10.0853 9.19755 9.99297 9.20112C9.90064 9.20469 9.80991 9.22642 9.72597 9.26505C9.64203 9.30368 9.56652 9.35847 9.50375 9.42629C9.44099 9.4941 9.39219 9.57362 9.36016 9.66029C9.32812 9.74696 9.31347 9.8391 9.31704 9.93144L9.64235 18.3689C9.64956 18.5553 9.7305 18.7311 9.86738 18.8578C10.0042 18.9845 10.1858 19.0516 10.3722 19.0444C10.5585 19.0372 10.7344 18.9562 10.8611 18.8194C10.9878 18.6825 11.0549 18.5009 11.0477 18.3146L10.7233 9.87706ZM15.8608 9.93144C15.8677 9.83733 15.8555 9.7428 15.8251 9.65348C15.7947 9.56416 15.7466 9.48188 15.6837 9.41154C15.6208 9.3412 15.5444 9.28424 15.459 9.24405C15.3736 9.20386 15.281 9.18127 15.1867 9.17762C15.0924 9.17397 14.9984 9.18933 14.9102 9.2228C14.8219 9.25627 14.7413 9.30715 14.6732 9.37241C14.605 9.43768 14.5507 9.516 14.5135 9.60269C14.4762 9.68939 14.4568 9.7827 14.4564 9.87706L14.1311 18.3146C14.1239 18.501 14.1911 18.6827 14.3178 18.8197C14.4446 18.9567 14.6206 19.0377 14.807 19.0449C14.9935 19.0521 15.1752 18.9849 15.3122 18.8582C15.4491 18.7314 15.5301 18.5554 15.5373 18.3689L15.8608 9.93144Z%22 fill%3D%22white%22/%3E%3C/svg%3E');
+
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+
+        .rwa-review-section {
+            position: relative;
+            width: 100%;
+
+            &__title {
+                display: flex;
+                padding: 10px 16px;
+                justify-content: space-between;
+                align-items: center;
+                align-self: stretch;
+                color: var(--color-Text-primay, #191F28);
+                font-family: Pretendard;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 141.2%;
+                letter-spacing: -0.17px;
+            }
+
+            &__badges {
+                display: flex;
+                gap: 8px;
+            }
+
+            &__badge {
+                color: var(--color-gray-500, #8B95A1);
+                font-feature-settings: 'ss10' on;
+
+                /* Label 2/regular */
+                font-family: Pretendard;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 138.5%;
+                /* 18.005px */
+                letter-spacing: -0.13px;
+
+                //사진첨부
+                &--photo {
+                    position: relative;
+                    padding-left: 20px;
+                    color: #8B95A1;
+                    background: no-repeat 0px center/contain url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2219%22 height%3D%2219%22 viewBox%3D%220 0 19 19%22 fill%3D%22none%22%3E%3Cpath d%3D%22M14.057 5.43696C14.3499 5.14406 14.8247 5.14406 15.1176 5.43696C15.4104 5.72985 15.4105 6.20463 15.1176 6.4975L8.2426 13.3725C8.10195 13.5131 7.9112 13.5922 7.71232 13.5922C7.51344 13.5922 7.3227 13.5131 7.18205 13.3725L4.05705 10.2475C3.76417 9.95462 3.7642 9.47985 4.05705 9.18695C4.34994 8.89406 4.8247 8.89406 5.1176 9.18695L7.71232 11.7817L14.057 5.43696Z%22 fill%3D%22%23B0B8C1%22/%3E%3C/svg%3E');
+
+                    &.on {
+                        color: #3182F7;
+                        background: no-repeat 0px center/contain url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2219%22 height%3D%2219%22 viewBox%3D%220 0 19 19%22 fill%3D%22none%22%3E%3Cpath d%3D%22M14.057 5.43696C14.3499 5.14406 14.8247 5.14406 15.1176 5.43696C15.4104 5.72985 15.4105 6.20463 15.1176 6.4975L8.2426 13.3725C8.10195 13.5131 7.9112 13.5922 7.71232 13.5922C7.51344 13.5922 7.3227 13.5131 7.18205 13.3725L4.05705 10.2475C3.76417 9.95462 3.7642 9.47985 4.05705 9.18695C4.34994 8.89406 4.8247 8.89406 5.1176 9.18695L7.71232 11.7817L14.057 5.43696Z%22 fill%3D%22%233182F7%22/%3E%3C/svg%3E');
+                    }
+                }
+
+                //80자이상
+                &--text {
+                    position: relative;
+                    padding-left: 20px;
+                    color: #8B95A1;
+                    background: no-repeat 0px center/contain url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2219%22 height%3D%2219%22 viewBox%3D%220 0 19 19%22 fill%3D%22none%22%3E%3Cpath d%3D%22M14.057 5.43696C14.3499 5.14406 14.8247 5.14406 15.1176 5.43696C15.4104 5.72985 15.4105 6.20463 15.1176 6.4975L8.2426 13.3725C8.10195 13.5131 7.9112 13.5922 7.71232 13.5922C7.51344 13.5922 7.3227 13.5131 7.18205 13.3725L4.05705 10.2475C3.76417 9.95462 3.7642 9.47985 4.05705 9.18695C4.34994 8.89406 4.8247 8.89406 5.1176 9.18695L7.71232 11.7817L14.057 5.43696Z%22 fill%3D%22%23B0B8C1%22/%3E%3C/svg%3E');
+
+                    &.on {
+                        color: #3182F7;
+                        background: no-repeat 0px center/contain url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 width%3D%2219%22 height%3D%2219%22 viewBox%3D%220 0 19 19%22 fill%3D%22none%22%3E%3Cpath d%3D%22M14.057 5.43696C14.3499 5.14406 14.8247 5.14406 15.1176 5.43696C15.4104 5.72985 15.4105 6.20463 15.1176 6.4975L8.2426 13.3725C8.10195 13.5131 7.9112 13.5922 7.71232 13.5922C7.51344 13.5922 7.3227 13.5131 7.18205 13.3725L4.05705 10.2475C3.76417 9.95462 3.7642 9.47985 4.05705 9.18695C4.34994 8.89406 4.8247 8.89406 5.1176 9.18695L7.71232 11.7817L14.057 5.43696Z%22 fill%3D%22%233182F7%22/%3E%3C/svg%3E');
+                    }
+                }
+
+                .icon {
+                    font-size: 10px;
+                }
+            }
+
+            &__textarea {
+                position: relative;
+                width: calc(100% - 32px);
+                margin-left: 16px;
+                min-height: 120px;
+                padding: 16px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                border: 1px solid var(--color-line-primary, #E6E8EC);
+                display: flex;
+                height: 140px;
+                align-items: flex-start;
+                gap: 10px;
+                align-self: stretch;
+                color: #191F28;
+                /* Body 2/regular */
+                font-family: Pretendard;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                /* 24px */
+                letter-spacing: -0.15px;
+                outline-color: #191F28;
+                &::placeholder {
+                    color: #B0B8C1;
+                }
+            }
+
+            &__char-count {
+                padding: 0 16px;
+                text-align: right;
+                margin: 8px 0;
+                color: var(--color-gray-700, #4E5968);
+                font-family: Pretendard;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                /* 142.857% */
+                letter-spacing: -0.35px;
+            }
+        }
+
+        .submit-section {
+            display: none;
+
+            position: relative;
+            margin-top: 20px;
+            width: 668px;
+            height: 50px;
+            padding: 16px 20px;
+            margin-left: 16px;
+            background-color: white;
+
+            padding: 12px 0px;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+            border-radius: 8px;
+            color:#B0B8C1;
+            background: #F7F7F8;
+            box-sizing: border-box;
+            
+
+            &.on{
+                color:#fff;
+                background: #3182F7;
+            }
+
+        }
+
+        .rwa-content-wrapper {
+            padding-bottom: 80px;
+        }
+    }
+}

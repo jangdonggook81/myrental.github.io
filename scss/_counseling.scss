@@ -1,0 +1,672 @@
+@charset "utf-8";
+
+.counseling{
+    padding-top: 20px;
+    .inner{
+        padding:0 16px; box-sizing: border-box;
+        .top{
+            position: relative; padding-bottom: 20px; 
+            border-bottom:1px solid #424242;
+            .btn_close{
+                position: absolute;right: 0; top: 0; width: 45px; height: 45px;
+                background: no-repeat center/45px 45px url('../images/common/icon_counseling_close.svg');
+
+            }
+            .t1{
+                color: var(--gray-191919, #191919);
+                text-align: left;
+                font-family: Pretendard;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px;
+                letter-spacing: -0.45px;
+                margin-bottom: 10px;
+            }
+            .t2{
+                color: var(--gray-757575, #757575);
+
+                /* 12/r */
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px; 
+                letter-spacing: -0.3px;
+            }
+            .t3{
+                color: var(--color-main-blue, #3182F7);
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px; 
+                letter-spacing: -0.3px;
+            }
+        }
+        .write_area{
+            padding-top: 8px;
+            display: flex; flex-direction: column; gap:8px;
+            .inp_area{
+                display: flex; 
+                .tit{
+                    flex:0 0 90px; //flex  환경에서 가로 90px 고정
+                    height: 40px; padding:10px 0; box-sizing: border-box;
+                    color: var(--gray-191919, #191919);
+                    font-family: Pretendard;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px; 
+                    letter-spacing: -0.35px;
+                }
+                .inp_case{
+                    width: 100%; height: 40px; padding:10px 0; box-sizing: border-box;
+                    border-bottom:1px solid #DDDDDD;
+                    input{
+                        color: var(--gray-191919, #191919);
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+                        &::placeholder{
+                            color: var(--gray-dddddd, #DDD);
+                        }
+                    }
+                }
+                .select_case{
+                    width: 100%; display: flex; 
+                    .water_wave{
+                        display: block;
+                        color: var(--gray-424242, #424242);
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+                        line-height: 40px;
+                        padding:0 9px;
+                    }
+                    select{
+                        color: #ddd;
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+
+                        width:50%; /* 원하는 너비설정 */
+                        height: 40px; /* 원하는 높이설정 */
+                        background: url('../images/common/icon_bottom_cursor.svg') no-repeat 95% 50%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                        
+                        border-bottom: 1px solid #ddd;
+                        box-sizing: border-box;
+                        border-radius: 0px; /* iOS 둥근모서리 제거 */
+                        -webkit-appearance: none; /* 네이티브 외형 감추기 */
+                        -moz-appearance: none;
+                        appearance: none;
+
+                        &::focus{outline:0;}
+                        &::-ms-expand {
+                            display: none;
+                        }
+                        &.active{
+                            color: #191919;
+                        }
+                    }
+                }
+            }
+        }
+
+        .write_area_wide{
+            padding: 23px 0;
+            display: flex; flex-direction: column; gap:8px;
+
+            
+
+            .inp_area{
+                display: flex; 
+                .tit{
+                    flex:0 0 120px; //flex  환경에서 가로 120px 고정
+                    height: 40px; padding:10px 0; box-sizing: border-box;
+                    color:#191919;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 22.5px; 
+                    letter-spacing: -0.35px;
+                    &:after{
+                        content:'*';display: inline-block;color:#3182F7;
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 22.5px;
+                        letter-spacing: -0.375px;
+                    }
+                }
+                
+                .inp_case{
+                    width: 100%; height: 48px;box-sizing: border-box;
+                    border:1px solid #DDDDDD;border-radius:6px;
+                    input{
+                        width:94%;
+                        color:#191919;
+                        margin:0 8px;
+                        padding:0 4px; 
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 45px; 
+                        letter-spacing: -0.35px;
+                        border:0;
+                        &::placeholder{
+                            color:#9E9E9E;
+                        }
+                    }
+                }
+            }
+            .inp_area{
+                display: flex; 
+                .tit{
+                    flex:0 0 110px; //flex  환경에서 가로 90px 고정
+                    height: 40px; padding:10px 0; box-sizing: border-box;
+                    color:#191919;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 22.5px; 
+                    letter-spacing: -0.35px;
+                    &:after{
+                        content:'*';display: inline-block;color:#3182F7;
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 22.5px;
+                        letter-spacing: -0.375px;
+                    }
+                }
+                
+                .inp_c.inp_area{
+                display: flex; 
+                .tit{
+                    flex:0 0 110; //flex  환경에서 가로 90px 고정
+                    height: 40px; padding:10px 0; box-sizing: border-box;
+                    color:#191919;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 22.5px; 
+                    letter-spacing: -0.35px;
+                    &:after{
+                        content:'*';display: inline-block;color:#3182F7;
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 22.5px;
+                        letter-spacing: -0.375px;
+                    }
+                }
+                
+                .select_case{
+                    width: 100%; display: flex; 
+                    .water_wave{
+                        display: block;
+                        color:#424242;
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+                        line-height: 40px;
+                        padding:0 9px;
+                    }
+                    select{
+                        color: #ddd;
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+
+                        width:50%; /* 원하는 너비설정 */
+                        height: 40px; /* 원하는 높이설정 */
+                        background: url('../images/common/icon_bottom_cursor.svg') no-repeat 95% 50%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                        
+                        border-bottom: 1px solid #ddd;
+                        box-sizing: border-box;
+                        border-radius: 0px; /* iOS 둥근모서리 제거 */
+                        -webkit-appearance: none; /* 네이티브 외형 감추기 */
+                        -moz-appearance: none;
+                        appearance: none;
+
+                        &::focus{outline:0;}
+                        &::-ms-expand {
+                            display: none;
+                        }
+                        &.active{
+                            color: #191919;
+                        }
+                    }
+                }
+            }ase{
+                    width: 100%; height: 48px;box-sizing: border-box;
+                    border:1px solid #DDDDDD;border-radius:6px;
+                    input{
+                        width:94%;
+                        color:#191919;
+                        margin:0 8px;
+                        padding:0 4px; 
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 45px; 
+                        letter-spacing: -0.35px;
+                        border:0;
+                        &::placeholder{
+                            color:#9E9E9E;
+                        }
+                    }
+                    .number_box{
+                        width: 100%;
+                        display: flex; 
+                        gap:5px;
+                        .hyphen{
+                            height: 100%; line-height: 40px;
+                        }
+                        .select_case {
+                            flex: 0 0 100px;
+                            width: 100%;
+                            display: flex;
+                            width: 100%;
+            
+                            select {
+                                color: #191919;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 20px;
+                                letter-spacing: -0.35px;
+                                padding-left:10px;
+                                width: 100%;
+                                /* 원하는 너비설정 */
+                                height: 40px;
+                                /* 원하는 높이설정 */
+                                background: url('../images/common/icon_bottom_cursor.svg') no-repeat 95% 50%;
+                                /* 네이티브 화살표를 커스텀 화살표로 대체 */
+            
+                                border-radius: 4px;
+                                border: 1px solid var(--gray-757575, #757575);
+                                box-sizing: border-box;
+                                /* iOS 둥근모서리 제거 */
+                                -webkit-appearance: none;
+                                /* 네이티브 외형 감추기 */
+                                -moz-appearance: none;
+                                appearance: none;
+            
+                                &::focus {
+                                    outline: 0;
+                                }
+            
+                                &::-ms-expand {
+                                    display: none;
+                                }
+            
+                                &.active {
+                                    color: #191919;
+                                }
+                            }
+                        }
+                        .inp_case {
+                            width: 100%;
+                            height: 40px;
+                            padding: 10px 0;
+                            box-sizing: border-box;
+                            border-bottom: 1px solid #DDDDDD;
+            
+                            input {
+                                width: 100%;
+                                color: #191919;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 20px;
+                                letter-spacing: -0.35px;
+                                padding-left: 12px;
+                                box-sizing: border-box;
+                                &::placeholder {
+                                    color: #DDD;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .agree_area{
+            display: flex;
+            width: 100%;
+            padding: 10px 0;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            margin-bottom: 32px;
+            .ques {
+                position: relative;
+                display: flex;
+                .checkCase {
+                  position: relative;
+                  display: inline-block;
+                  width: 24px;
+                  input {
+                    width: 24px;
+                    height: 24px;
+                    border: none;
+                    margin: 0;
+                    opacity: 0;
+                    vertical-align: middle;
+                  }
+                  label {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    background: url('../images/common/icon_check_btn_off.svg') no-repeat center 100%;
+                  }
+                  input[type="checkbox"]:checked + label {
+                    background: url('../images/common/icon_check_btn_on.svg') no-repeat center 100%;
+                  }
+                }
+                .wordCase {
+                    padding-left: 6px; 
+                    box-sizing: border-box;
+                    color: var(--gray-757575, #757575);
+                    font-family: Pretendard;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.3px;
+                    .color_point{
+                        color:#3182F7;
+                    }
+                    
+                }
+            }
+            .btn_all_view{
+                flex:0 0 41px;
+                margin-left: 6px;
+                display: inline-block;
+                padding: 5px 7px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 3px;
+                border: 0.75px solid var(--gray-bdbdbd, #BDBDBD);
+                color: var(--gray-505050, #505050);
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px; 
+                letter-spacing: -0.3px;
+            }
+        }
+        .btn_area{
+            padding: 10px 16px; 
+            .btn_apply{
+                display: block;
+                width: 100%; height: 45px; line-height: 45px;
+                color: #fff;
+                background-color: #3182F7;
+                color: var(--gray-ffffff, #FFF);
+                text-align: center;
+                font-family: Pretendard;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 45px;
+                letter-spacing: -0.45px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.modal_counseling{
+    display: none;
+    position: fixed; width: 100%; height:100%; z-index: 9999; background-color:var(--15, rgba(0, 0, 0, 0.15)) ;
+    top:0;
+    // & > .inner{
+    //     position: relative; margin-top: 15px; margin-left: 15px; width: calc(100% - 30px); height: calc(100vh - 30px);; box-sizing: border-box;background-color: #fff; border-radius: 25px;
+    //  }
+    .inner{
+        padding:15px 16px; box-sizing: border-box;background-color: #fff; 
+
+        position: relative; margin-top: 15px; margin-left: 15px; width: calc(100% - 30px); height: calc(100% - 30px); box-sizing: border-box;background-color: #fff;  border-radius: 5px;
+
+        overflow-y: auto;
+
+        .top{
+            position: relative; padding-bottom: 20px; 
+            border-bottom:1px solid #424242;
+            .btn_close{
+                position: absolute;right: 0; top: 0; width: 45px; height: 45px;
+                background: no-repeat center/45px 45px url('../images/common/icon_counseling_close.svg');
+
+            }
+            .t1{
+                color: var(--gray-191919, #191919);
+                text-align: left;
+                font-family: Pretendard;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px;
+                letter-spacing: -0.45px;
+                margin-bottom: 10px;
+            }
+            .t2{
+                color: var(--gray-757575, #757575);
+
+                /* 12/r */
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px; 
+                letter-spacing: -0.3px;
+            }
+            .t3{
+                color: var(--color-main-blue, #3182F7);
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px; 
+                letter-spacing: -0.3px;
+            }
+        }
+        .write_area{
+            padding-top: 8px;
+            display: flex; flex-direction: column; gap:8px;
+            .inp_area{
+                display: flex; 
+                .tit{
+                    flex:0 0 90px; //flex  환경에서 가로 90px 고정
+                    height: 40px; padding:10px 0; box-sizing: border-box;
+                    color: var(--gray-191919, #191919);
+                    font-family: Pretendard;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px; 
+                    letter-spacing: -0.35px;
+                }
+                .inp_case{
+                    width: 100%; height: 40px; padding:10px 0; box-sizing: border-box;
+                    border-bottom:1px solid #DDDDDD;
+                    input{
+                        color: var(--gray-191919, #191919);
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+                        &::placeholder{
+                            color: var(--gray-dddddd, #DDD);
+                        }
+                    }
+                }
+                .select_case{
+                    width: 100%; display: flex; 
+                    .water_wave{
+                        display: block;
+                        color: var(--gray-424242, #424242);
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+                        line-height: 40px;
+                        padding:0 9px;
+                    }
+                    select{
+                        color: #ddd;
+                        font-family: Pretendard;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 20px; 
+                        letter-spacing: -0.35px;
+
+                        width:50%; /* 원하는 너비설정 */
+                        height: 40px; /* 원하는 높이설정 */
+                        background: url('../images/common/icon_bottom_cursor.svg') no-repeat 95% 50%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+                        
+                        border-bottom: 1px solid #ddd;
+                        box-sizing: border-box;
+                        border-radius: 0px; /* iOS 둥근모서리 제거 */
+                        -webkit-appearance: none; /* 네이티브 외형 감추기 */
+                        -moz-appearance: none;
+                        appearance: none;
+
+                        &::focus{outline:0;}
+                        &::-ms-expand {
+                            display: none;
+                        }
+                        &.active{
+                            color: #191919;
+                        }
+                    }
+                }
+            }
+        }
+        .agree_area{
+            display: flex;
+            width: 100%;
+            padding: 10px 0;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            margin-bottom: 32px;
+            .ques {
+                position: relative;
+                display: flex;
+                .checkCase {
+                  position: relative;
+                  display: inline-block;
+                  width: 24px;
+                  input {
+                    width: 24px;
+                    height: 24px;
+                    border: none;
+                    margin: 0;
+                    opacity: 0;
+                    vertical-align: middle;
+                  }
+                  label {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    background: url('../images/common/icon_check_btn_off.svg') no-repeat center 100%;
+                  }
+                  input[type="checkbox"]:checked + label {
+                    background: url('../images/common/icon_check_btn_on.svg') no-repeat center 100%;
+                  }
+                }
+                .wordCase {
+                    padding-left: 6px; 
+                    box-sizing: border-box;
+                    color: var(--gray-757575, #757575);
+                    font-family: Pretendard;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.3px;
+                    .color_point{
+                        color:#3182F7;
+                    }
+                    
+                }
+            }
+            .btn_all_view{
+                flex:0 0 41px;
+                margin-left: 6px;
+                display: inline-block;
+                padding: 5px 7px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 3px;
+                border: 0.75px solid var(--gray-bdbdbd, #BDBDBD);
+                color: var(--gray-505050, #505050);
+                font-family: Pretendard;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px; 
+                letter-spacing: -0.3px;
+            }
+        }
+        .btn_area{
+            padding: 10px 16px; 
+            .btn_apply{
+                display: block;
+                width: 100%; height: 45px; line-height: 45px;
+                color: #fff;
+                background-color: #3182F7;
+                color: var(--gray-ffffff, #FFF);
+                text-align: center;
+                font-family: Pretendard;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 45px;
+                letter-spacing: -0.45px;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+.btn_apply{
+    display: block;
+    width: 100%; height: 45px; line-height: 45px;
+    color: #fff;
+    background-color: #3182F7;
+    color: var(--gray-ffffff, #FFF);
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: -0.45px;
+    border-radius: 8px;
+}

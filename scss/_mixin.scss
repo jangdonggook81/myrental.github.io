@@ -1,0 +1,123 @@
+@charset "utf-8";
+// ============================================================ 
+// _variables.scss 
+// 2022.04.07
+// ============================================================ 
+
+// border 
+// @param : $width  
+// @param : $color ( 기본값 red ) 
+@mixin border($width , $color:red) {
+    border:$width solid $color;
+}
+
+// text-ellipsis (말줄임..) 
+// @param : $line ( 기본값 1 줄 )
+// 사용법 @include ellipsis();
+@mixin ellipsis($line: 1) {
+    @if ($line == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else { 
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $line;
+    }
+}
+
+// clearfix (float 된 요소를 clear) 
+// 사용법 @include clearfix();
+@mixin clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// 사용법 @include selectboxCustom(가로px , 세로px);
+@mixin selectboxCustom($width:200px , $height:50px){   
+    width: $width; /* 원하는 너비설정 */
+    height: $height; /* 원하는 높이설정 */
+    //padding: .8em .5em; /* 여백으로 높이 설정 */
+    font-family: $noto;
+    background: url('http://image.tsherpa.co.kr/elementary/local_data/select_arrow.png') no-repeat 95% 50%; /* 네이티브 화살표를 커스텀 화살표로 대체 */
+    
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    border-radius: 0px; /* iOS 둥근모서리 제거 */
+    -webkit-appearance: none; /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    &::focus{outline:0;}
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+// 사용법 @include inputboxCustom(가로px , 세로px);
+@mixin inputboxCustom($width:200px , $height:50px){  
+    width: $width; /* 원하는 너비설정 */
+    height: $height; /* 원하는 높이설정 */
+    font-family: $noto;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    &::placeholder {
+        color: red;
+        font-weight: bold;
+    }
+}
+
+// 사용법 @include checkboxCustom();
+@mixin checkboxCustom(){
+    position: relative;
+    & input[type=checkbox] { 
+        display:none; 
+        & + label { 
+            height: 18px;
+            padding-left: 23px; 
+            font-size: 14px; 
+            color: #000000; 
+            letter-spacing: -0.5px; 
+            background-image: url('../images/checkbox.png'); 
+            background-repeat: no-repeat; 
+            background-position-y: 2px; 
+            cursor: pointer; 
+        }
+        &:checked + label { 
+            background-image: url('../images/checkbox_active.png'); 
+            background-repeat: no-repeat; 
+        }
+    }
+}
+
+// 사용법 @include btn_inTable(가로,세로,폰트컬러,배경색);
+@mixin btn_inTable($width:auto, $height:20px,  $fontColor:#fff , $bgColor:#000){
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:$width;
+    height:$height;
+    color:$fontColor !important;
+    background-color: $bgColor;
+    font-size: 12px;
+    font-weight: 300;
+    padding:0 10px;
+    box-sizing: border-box;
+    border:1px solid #000;
+    border-radius: 5px;
+}
+
