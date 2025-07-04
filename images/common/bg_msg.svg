@@ -1,0 +1,13 @@
+<svg width="171" height="58" viewBox="0 0 171 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Union" filter="url(#filter0_b_5354_21250)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 0C2.68629 0 0 2.68629 0 6V52C0 55.3137 2.6863 58 6 58H154C157.314 58 160 55.3137 160 52V35.7244L169.604 29.8532C170.242 29.4632 170.242 28.5367 169.604 28.1468L160 22.2756V6C160 2.68629 157.314 0 154 0H6Z" fill="#3182F7"/>
+</g>
+<defs>
+<filter id="filter0_b_5354_21250" x="-8" y="-8" width="186.082" height="74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="4"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_5354_21250"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_5354_21250" result="shape"/>
+</filter>
+</defs>
+</svg>

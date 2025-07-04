@@ -18,28 +18,21 @@ $(function() {
         }
 
         /* 2025.06.29 */
-        console.log("실행되고있나요????????")
-
-        setTimeout(function() {
-
-            const swiperContainer = document.querySelector('.top_header_banner .main_swiper');
-            const slides = swiperContainer.querySelectorAll('.swiper-slide');
-            // 슬라이드 요소가 1개이상일때 실행
-            if (slides.length > 1) {
-                console.log("헤더모션실행")
-                const top_header_banner = new Swiper('.top_header_banner .main_swiper', {
-                    direction: "vertical",
-                    loop: true,
-                    slidesPerView: 1,
-                    autoplay: {
-                        delay: 6000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
-                        disableOnInteraction: false, // 상호작용 후에도 autoplay 유지
-                    },
-                });
-            }
-        }, 500)
-
-       
+        const swiperContainer = document.querySelector('.top_header_banner .main_swiper');
+        const slides = swiperContainer.querySelectorAll('.swiper-slide');
+        // 슬라이드 요소가 1개이상일때 실행
+        if (slides.length > 1) {
+            console.log("헤더모션실행")
+            const top_header_banner = new Swiper('.top_header_banner .main_swiper', {
+                direction: "vertical",
+                loop: true,
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 6000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
+                    disableOnInteraction: false, // 상호작용 후에도 autoplay 유지
+                },
+            });
+        }
         /* //2025.06.29 */
     });
     $("#footer").load("./include/footer.html", function(response, status, xhr) {

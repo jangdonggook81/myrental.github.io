@@ -1,0 +1,31 @@
+<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="40" height="41" fill="#747474"/>
+<g id="&#237;&#153;&#136;">
+<path d="M-2817 -5419C-2817 -5432.25 -2806.25 -5443 -2793 -5443H2426C2439.25 -5443 2450 -5432.25 2450 -5419V722C2450 735.255 2439.25 746 2426 746H-2793C-2806.25 746 -2817 735.255 -2817 722V-5419Z" fill="#404040"/>
+<path d="M-2793 -5442H2426V-5444H-2793V-5442ZM2449 -5419V722H2451V-5419H2449ZM2426 745H-2793V747H2426V745ZM-2816 722V-5419H-2818V722H-2816ZM-2793 745C-2805.7 745 -2816 734.703 -2816 722H-2818C-2818 735.807 -2806.81 747 -2793 747V745ZM2449 722C2449 734.702 2438.7 745 2426 745V747C2439.81 747 2451 735.807 2451 722H2449ZM2426 -5442C2438.7 -5442 2449 -5431.7 2449 -5419H2451C2451 -5432.81 2439.81 -5444 2426 -5444V-5442ZM-2793 -5444C-2806.81 -5444 -2818 -5432.81 -2818 -5419H-2816C-2816 -5431.7 -2805.7 -5442 -2793 -5442V-5444Z" fill="black" fill-opacity="0.1"/>
+<g id="&#237;&#153;&#136;_2" clip-path="url(#clip0_1970_13137)">
+<rect width="375" height="5657" transform="translate(-300 -5149)" fill="white"/>
+<g id="&#236;&#132;&#156;&#235;&#185;&#132;&#236;&#138;&#164;&#236;&#149;&#136;&#235;&#130;&#180;">
+<g id="Frame 5818">
+<g id="Frame 5813">
+<g id="Frame 5809">
+<rect x="-19.4004" y="-18.2979" width="78.4" height="78.4" rx="9.8" fill="#F5F5F5"/>
+<g id="Frame 5636">
+<path id="Vector" d="M26.0398 31.9402L35.0198 22.9602C35.8298 22.1502 35.8598 20.8502 35.0798 20.0702L34.6498 19.6402C33.8698 18.8602 32.5798 18.8802 31.7598 19.7002L22.7598 28.7002L22.5098 32.2402L26.0198 31.9902L26.0398 31.9502V31.9402Z" stroke="#191919" stroke-width="1.96" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M30.2695 21.1802L33.5395 24.4402" stroke="#191919" stroke-width="1.96" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M19.42 29.7205H5.77C4.79 29.7205 4 28.9305 4 27.9505V10.5405C4 9.5605 4.79 8.77051 5.77 8.77051H31.16C32.14 8.77051 32.93 9.5605 32.93 10.5405V15.6705" stroke="#191919" stroke-width="1.96" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M5.35938 13.1904H32.3794" stroke="#191919" stroke-width="1.96" stroke-linecap="square" stroke-linejoin="round"/>
+<path id="Vector_5" d="M7.55078 25.6001H10.5608" stroke="#191919" stroke-width="1.96" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_1970_13137">
+<rect width="375" height="5657" fill="white" transform="translate(-300 -5149)"/>
+</clipPath>
+</defs>
+</svg>

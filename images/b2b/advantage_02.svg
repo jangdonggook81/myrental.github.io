@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 474 501.22">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .cls-7 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-3 {
+        fill: url(#_무제_그라디언트_2);
+        filter: url(#drop-shadow-3);
+      }
+
+      .cls-4 {
+        fill: rgba(198, 204, 225, .5);
+      }
+
+      .cls-5 {
+        fill: #ebeffa;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" width="474" height="467" rx="16" ry="16"/>
+    </clipPath>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4"/>
+      <feGaussianBlur result="blur" stdDeviation="10"/>
+      <feFlood flood-color="#000" flood-opacity=".2"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4"/>
+      <feGaussianBlur result="blur-2" stdDeviation="10"/>
+      <feFlood flood-color="#000" flood-opacity=".2"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="_무제_그라디언트_2" data-name="무제 그라디언트 2" x1="215.35" y1="522.39" x2="215.35" y2="274.19" gradientTransform="translate(6.33 741.19) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ebeffa"/>
+    </linearGradient>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="4"/>
+      <feGaussianBlur result="blur-3" stdDeviation="10"/>
+      <feFlood flood-color="#000" flood-opacity=".2"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-1">
+    <g>
+      <g class="cls-7">
+        <rect class="cls-5" x="96.17" y="234.8" width="292" height="232.2"/>
+      </g>
+      <g class="cls-6">
+        <rect class="cls-5" x="87.9" y="225.8" width="289" height="241.2"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-3" x="76.18" y="218.8" width="291" height="248.2"/>
+      <path class="cls-4" d="M110.68,251.8h115c3.59,0,6.5,2.91,6.5,6.5h0c0,3.59-2.91,6.5-6.5,6.5h-115c-3.59,0-6.5-2.91-6.5-6.5h0c0-3.59,2.91-6.5,6.5-6.5Z"/>
+      <path class="cls-4" d="M110.68,277.8h202c3.59,0,6.5,2.91,6.5,6.5h0c0,3.59-2.91,6.5-6.5,6.5H110.68c-3.59,0-6.5-2.91-6.5-6.5h0c0-3.59,2.91-6.5,6.5-6.5Z"/>
+      <path class="cls-4" d="M110.68,303.8h115c3.59,0,6.5,2.91,6.5,6.5h0c0,3.59-2.91,6.5-6.5,6.5h-115c-3.59,0-6.5-2.91-6.5-6.5h0c0-3.59,2.91-6.5,6.5-6.5Z"/>
+    </g>
+  </g>
+</svg>
