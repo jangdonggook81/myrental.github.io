@@ -183,7 +183,7 @@
                                             .img_case{
                                                 position: relative;
                                                 width: 120px; height: 120px;
-                                                border-radius: 4px;
+                                                border-radius: 8px;
                                                 border: 1px solid var(--gray-eeeeee, #EEE);
                                                 object-fit: contain;
                                                 .ranking{
@@ -219,50 +219,60 @@
                                             font-family: Pretendard;
                                             font-size: 14px;
                                             .t1_brand{
-                                                color: var(--gray-191919, #191919);
+                                                color: var(--color-gray-500, #8B95A1);
+                                                font-family: Pretendard;
+                                                font-size: 12px;
                                                 font-style: normal;
-                                                font-weight: 600;
-                                                line-height: 22px; 
-                                                letter-spacing: -0.35px;
+                                                font-weight: 400;
+                                                line-height: 133.4%; /* 16.008px */
+                                                letter-spacing: -0.12px;
                                             }
                                             .t2_products_name{
-                                                color: var(--gray-191919, #191919);
+                                                color: var(--color-gray-800, #333C49);
+                                                font-size: 13px;
                                                 font-style: normal;
-                                                font-weight: 500;
-                                                letter-spacing: -0.35px;
-                                                height: 38px;
-                                                @include ellipsis(2);
-                                                line-height: 20px; 
+                                                font-weight: 400;
+                                                line-height: 138.5%; /* 18.005px */
+                                                letter-spacing: -0.13px;
+                                                overflow: hidden;                                     
+                                                //@include ellipsis(2);
+                                                display: -webkit-box;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                -webkit-box-orient: vertical;
+                                                -webkit-line-clamp: 2;
+                                                 line-clamp: 2;       
+
                                             }
                                             .price_case{
-                                                margin-top: 12px;
-                                                .origin_case{
-                                                    color: var(--gray-757575, #757575);
-                                                    font-size: 14px;
+                                                margin-top: 6px;
+                                                .sale_case{
+                                                    color: var(--color-blue, #3182F7);
+                                                    font-size: 12px;
                                                     font-style: normal;
-                                                    font-weight: 500;
-                                                    line-height: 20px;
-                                                    letter-spacing: -0.35px;
-                                                    .price{
+                                                    font-weight: 400;
+                                                    line-height: 133.4%; /* 16.008px */
+                                                    letter-spacing: -0.12px;
+                                                 /*   .price{
                                                         color: var(--gray-757575, #757575);
                                                         letter-spacing: -0.35px;
                                                         margin-left: 12px;
-                                                    }
+                                                    }*/
                                                 }
-                                                .sale_case{
-                                                    color: var(--color-main-blue, #3182F7);
-                                                    font-size: 14px;
+                                                .price_case_con{
+                                                    color: var(--color-blue, #3182F7);
+                                                    font-size: 18px;
                                                     font-style: normal;
                                                     font-weight: 700;
-                                                    line-height: 22px;
-                                                    letter-spacing: -0.35px;
+                                                    line-height: 144.5%; /* 26.01px */
+                                                    letter-spacing: -0.216px;
                                                     .price{
-                                                        color: var(--color-main-blue, #3182F7);
-                                                        font-size: 16px;
+                                                        color: var(--color-gray-800, #333C49);
+                                                        font-size: 18px;
+                                                        font-style: normal;
                                                         font-weight: 700;
-                                                        line-height: 24px;
-                                                        letter-spacing: -0.4px;
-                                                        margin-left: 12px;
+                                                        line-height: 144.5%; /* 26.01px */
+                                                        letter-spacing: -0.216px;
                                                         vertical-align: top;
                                                     }
                                                 }

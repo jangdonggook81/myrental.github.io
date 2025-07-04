@@ -504,48 +504,6 @@
                     box-sizing: border-box;
                     border-bottom: 8px solid #F7F7F8;
 
-                    .t_date {
-                        margin-top: 24px;
-                        margin-bottom: 6px;
-                        padding: 4px 0;
-                        box-sizing: border-box;
-                        color: var(--color-gray-900, #191F28);
-                        font-family: Pretendard;
-                        font-size: 13px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 20px;
-                        /* 142.857% */
-                        letter-spacing: -0.35px;
-
-                        .td_count {
-                            position: relative;
-                            color: var(--color-Text-secondary, #6B7684);
-                            font-feature-settings: 'ss10' on;
-                            /* Label 2/regular */
-                            font-family: Pretendard;
-                            font-size: 13px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 138.5%;
-                            /* 18.005px */
-                            letter-spacing: -0.13px;
-                            padding-left: 8px;
-                            margin-left: 8px;
-
-                            &:before {
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                left: 0;
-                                top: 2px;
-                                width: 1px;
-                                height: 10px;
-                                background-color: #E6E8EC;
-                            }
-                        }
-                    }
-
                     .list {
                         li {
                             margin-bottom: 24px;
@@ -663,6 +621,50 @@
 
                         }
                     }
+
+                    .t_date {
+                        margin-top: 24px;
+                        margin-bottom: 6px;
+                        padding: 4px 0;
+                        box-sizing: border-box;
+                        color: var(--color-gray-900, #191F28);
+                        font-family: Pretendard;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        /* 142.857% */
+                        letter-spacing: -0.35px;
+
+                        .td_count {
+                            position: relative;
+                            color: var(--color-Text-secondary, #6B7684);
+                            font-feature-settings: 'ss10' on;
+                            /* Label 2/regular */
+                            font-family: Pretendard;
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 138.5%;
+                            /* 18.005px */
+                            letter-spacing: -0.13px;
+                            padding-left: 8px;
+                            margin-left: 8px;
+
+                            &:before {
+                                content: '';
+                                display: block;
+                                position: absolute;
+                                left: 0;
+                                top: 2px;
+                                width: 1px;
+                                height: 10px;
+                                background-color: #E6E8EC;
+                            }
+                        }
+                    }
+
+
                 }
 
             }
