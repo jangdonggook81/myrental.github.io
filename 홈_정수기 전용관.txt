@@ -1,16 +1,13 @@
 to JR
-1.넘기기전 체크 : 
--common.js 파일에서 2025.09.11 주석부분체크
--mstyle.scss 에서  custom.css 삭제
 
-2.산출물 : js , css , images 파일 덮음처리
+1.산출물 : js , css , images 파일 덮음처리
 
 <!-- 2025.09.11 -->  주석부분만 확인
-3.작업한 파일
+2.작업한 파일
 home.html
 recommend_01.html
 recommend_02.html
-recommend_03.html  작업중  { 제휴카드안내 - 완료 , 하단에서나오는 선택창 - 진행중 }
+recommend_03.html  - 화면내에  "제휴카드안내버튼"  ,  화면하단 "장바구니버튼"
 
 
 --- 내가 업체에 요청한사항 ---
