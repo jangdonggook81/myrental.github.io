@@ -1,0 +1,319 @@
+/* 모바일 */
+.only_pc { display:none !important; }
+
+#checked_list_top_wrap { display:none; }
+
+.productPageDetail .tab01_inner.no-review { 
+    min-height: auto;
+}
+.no-review-wrap { 
+    text-align: center;
+    padding: 30px 0 20px 0;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #333;
+}
+.no-review-wrap h4 { font-size: 14px; font-weight:bold; }
+
+/* 리뷰 보기 팝업 - 사용자 사진 안씀 */
+.review_gallery .review_detail_popup .review-header-info .left{ display:none; }
+.productPageDetail .tab01_inner .review-header-info .left { display:none; }
+.productPageDetail .tab01_inner .review-text { word-break: break-all; }
+
+/* 리뷰 쓰기 팝업 */
+.review_write_area .review_write_popup .rwa-rating-section { padding: 30px 16px 0 16px }
+.review_write_area .review_write_popup .rwa-photo-section { padding: 35px 16px 0 16px }
+.review_write_area .review_write_popup .rwa-review-section { padding-top: 20px  }
+
+/* 리뷰목록  */
+
+.productPageDetail .tab01_inner .rating-bars { border: 1px solid #F7F7F8; border-radius:16px; }
+
+/* 목록 스티커 필터 */
+.product_best_xscroll_sub_filter .inner ul li a:after { top: 8px;} 
+.product_best_xscroll_sub_filter .inner ul li a { padding-top: 6px; line-height: 26px; }
+.product_best_xscroll_sub_filter .inner ul { height:54px }
+
+/* 베스트 상품 페이지 */
+.product_best_xscroll { margin-bottom: 10px;}
+.best_products .product_list .inner ul { margin-top: 20px; }
+
+/* 메인페이지 베스트 상품 */
+.home_beat_products .product_best_xscroll { margin-bottom: 5px;}
+#products_swiper_1 { margin-top: 10px; } 
+
+
+.bg_blue { 
+    background: #EBF3FF !important;
+    color: #3182F8 !important;
+}
+
+.sticker_bottom {
+    margin: 3px 0 0 0;
+}
+
+.sticker_bottom span {
+    display: inline !important;
+}
+
+/*.sticker_bottom .ico_box {
+    position: relative;
+    height: 16px;
+    margin-right: 3px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.35px;
+    /* color: #fff; 주석 처리된 부분입니다. 필요한 경우 주석 해제하세요. */
+}*/
+
+.sticker_bottom .bg_green {
+    background: #89bb49;
+}
+
+.sticker_bottom .bg_red {
+    background: #a93234;
+}
+
+.sticker_bottom .bg_blue {
+    background: #EBF3FF;
+    color: #3182F8;
+}
+
+.sticker_bottom .bg_purple {
+    background: #7232a9;
+}
+
+.sticker_bottom .bg_orange {
+    background: #ec7a00;
+}
+
+.sticker_bottom .bg_grey {
+    background: #bbb;
+}
+.home .home_beat_products .product_object .inner .products_swiper .swiper-wrapper .swiper-slide .list li a .left .img_case {
+    height: 135px;
+}
+
+
+/* 팝업레이어 */
+#hd_pop {z-index:1000;position:relative;margin:0 auto;width:90%;height:0}
+#hd_pop h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
+.hd_pops {position:absolute;background:#fff}
+.hd_pops img {max-width:100%;height:auto; display: block;}
+.hd_pops_con {}
+.hd_pops_footer {padding:0px 0;background:#333;color:#fff;text-align:right}
+.hd_pops_footer button {margin-right:0px;padding:5px 10px;border:0;color:#fff; padding: 10px; font-size: 14px;}
+.hd_pops_footer button.hd_pops_close {background: #000; padding: 10px 30px;}
+.sound_only { display:none; }
+
+/* 장바구니 */
+.cart .middle .list li .r_box .right { width: auto; }
+
+.contents_wrap.privacy .tab_case {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 7px;
+    flex-wrap: wrap; /* Enable wrapping for multiple rows */
+}
+
+.contents_wrap.privacy .tab_case {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 7px;
+    flex-wrap: wrap; /* Enable wrapping for multiple rows */
+}
+
+.contents_wrap.privacy .tab_case a {
+    display: block;
+    padding-left: 17px;
+    box-sizing: border-box;
+    width: calc(50% - 7px); /* Adjust width to fit at least 2 tabs in a row */
+    min-height: 40px;
+    border-radius: 4px;
+    background-color: #eee;
+    color: var(--gray-757575, #757575);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.35px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center; /* Center-align text */
+}
+
+.contents_wrap.privacy .tab_case a.active,
+.contents_wrap.privacy .tab_case a:hover {
+    background-color: #191919;
+    color: #fff;
+}.contents_wrap.privacy .tab_case {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 7px;
+    flex-wrap: wrap; /* Enable wrapping for multiple rows */
+}
+
+.contents_wrap.privacy .tab_case a {
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    padding-left: 17px;
+    box-sizing: border-box;
+    width: calc(50% - 7px); /* Adjust width for 2 tabs per row */
+    min-height: 40px;
+    border-radius: 4px;
+    background-color: #eee;
+    color: var(--gray-757575, #757575);
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.35px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.contents_wrap.privacy .tab_case a.active,
+.contents_wrap.privacy .tab_case a:hover {
+    background-color: #191919;
+    color: #fff;
+}
+
+
+/* 공지사항 게시글 보기 */ 
+#bo_v_atc h1 { font-size:30px; margin-top: 50px; margin-bottom: 40px; font-weight: bold; text-align: center; }
+#bo_v_atc h1:first-child { margin-top: 0; }
+#bo_v_atc h2 { font-size:20px; margin-top: 50px; margin-bottom: 15px; font-weight: bold; }
+#bo_v_atc h1, h2 {color: #333; }
+#bo_v_atc p { line-height: 30px; }
+#bo_v_atc .highlight {  color: rgb(49, 130, 247); font-weight: bold; }
+#bo_v_atc ul {
+            list-style-type: square;
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom:  5px;
+        }
+#bo_v_atc ul li { line-height:30px; }
+
+
+.productPageDetail .top .top_visual .inner .main_swiper .sticker_top_case .ico_box { 
+    font-size: 13px;line-height: 26px; 
+
+ }
+
+
+.productPage .filter_area .inner .bottom ul li { width:45%; } 
+.productPage .filter_area { display:none; }
+.productPage .filter_area.active { display:block; }
+.productPage .filter_area .inner { display:block; }
+.productPage .filter_area .filter_items { max-height: 50vh; overflow-y: scroll;}
+
+/* 체크박스 버전 - product_best_xscroll_sub */
+.product_best_xscroll_sub_checkbox {
+    box-sizing: border-box;
+    width: 100vw; 
+    overflow: hidden; 
+    min-width: 375px;
+}
+
+.product_best_xscroll_sub_checkbox .inner {
+    padding: 0 !important;
+}
+
+.product_best_xscroll_sub_checkbox ul {
+    display: flex;
+    font-size: 0;
+    gap: 8px;
+    overflow-y: hidden; 
+    overflow-x: auto;
+    padding: 11px 16px 31px 16px;
+    box-sizing: border-box;
+    /* 스크롤 투명 */
+    -webkit-scrollbar: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.product_best_xscroll_sub_checkbox ul::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.product_best_xscroll_sub_checkbox ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.product_best_xscroll_sub_checkbox ul::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0px;
+}
+
+.product_best_xscroll_sub_checkbox ul::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.product_best_xscroll_sub_checkbox ul > li {
+    display: inline-block; 
+    white-space: nowrap;
+    margin: 0 !important; 
+    width: auto !important;
+    position: relative;
+    background:none ;
+}
+
+.product_best_xscroll_sub_checkbox li input[type="checkbox"] {
+    display: none; /* 기본 체크박스 숨김 */
+}
+
+.product_best_xscroll_sub_checkbox li label {
+    display: flex;
+    height: 32px;
+    padding: 6px 10px 5px 28px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gray-700, #4E5968);
+    font-feature-settings: 'ss10' on;
+    
+    /* Label 1/medium */
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.14px;
+    box-sizing: border-box;
+    
+    border-radius: 100px;
+    border: 1px solid var(--color-gray-200, #E6E8EC);
+    cursor: pointer;
+    
+    /* 체크 안된 상태 - 회색 체크 표시 */
+    background-image: url(./images/common/best_sub_check_off.svg);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 18px 18px;
+}
+
+.product_best_xscroll_sub_checkbox li input[type="checkbox"]:checked + label {
+    color: var(--color-blue, #3182F7);
+    border: 1px solid var(--color-blue, #3182F7);
+    
+    /* 체크된 상태 - 단순한 체크 표시만 */
+    background-image: url(./images/common/best_sub_check_on.svg);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 18px 18px;
+}
+

@@ -1,24 +1,31 @@
 <div class="floating">
-	<div class="inner">
-		<div class="default">
-			<a class="btn_top" href="#"><span class="ir_su">상단으로이동버튼</span></a>
-			<div class="recent_product">
-				<a href="#"><img src="../../images/floating/recent_product.png" alt="최근본상품"></a>
-			</div>
-		</div>
-		<div class="counseling_menu">
-			<a class="menu_01" href="#">톡 상담</a>
-			<a class="menu_02" href="#">상담예약</a>
-			<a class="menu_03" href="#">사업자견적</a>
-			<a class="menu_04" href="#">입점문의</a>
-		</div>
-		<a class="btn" href="#">
-            <!-- 2025.06.29 -->
-            <div class="guide_popup">
-                <span>상담이 필요하면 CLICK!</span>
+    <div class="inner">
+        <div class="default">
+            <a class="btn_top visible" href="#"><span class="ir_su">상단으로이동버튼</span></a>
+            <div class="recent_product">
+                <a onclick="$('body').addClass('no_scroll_moving');$('html, body').scrollTop(0);$('.recent_products_pop').show(); adjustScrollingHeight(); return false"><img src="https://myrental.kr/theme/myrental/mobile/images/floating/recent_product.png" alt="최근본상품" title=""></a>
             </div>
-            <!-- //2025.06.29 -->
-            <span class="ir_su">상담신청버튼</span>
+        </div>
+        <div class="counseling_menu">
+
+            <p class="column_case">
+                <a class="menu_05" href="/business_b2b.php">사업자견적</a>
+                <a class="menu_04" href="/business_rental.php">입점문의</a>
+            </p>
+            <p class="column_case">
+                <a class="menu_03" href="http://pf.kakao.com/_xaeRxjxj" target="_blank">실시간 톡상담</a>
+                <a class="menu_02" href="tel:1660-1260">전화 상담</a>
+                <a class="menu_01" onclick="$('body').addClass('no_scroll_moving');$('.modal_counseling').show();">상담예약</a>
+            </p>
+        </div>
+
+        <a class="btn" href="#">
+                        <!-- 5초뒤사라지는 툴팁 -->
+           <div class="guide_popup">
+                상담이 필요하면 CLICK!
+           </div>
+           <!--  -->
+                      <span class="ir_su">상담신청버튼</span>
         </a>
-	</div>
-</div> 
+    </div>
+</div>

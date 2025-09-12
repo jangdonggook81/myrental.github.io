@@ -11,30 +11,8 @@ $(function() {
     window.onresize = adjustScrollingHeight;
 });
 $(function() {
-    /* header footer load */
-    $("#header").load("./include/header.html", function(response, status, xhr) {
-        if (status == "error") {
-            //console.error("Error loading external HTML:", xhr.status, xhr.statusText);
-        }
+   
 
-        /* 2025.06.29 */
-        const swiperContainer = document.querySelector('.top_header_banner .main_swiper');
-        const slides = swiperContainer.querySelectorAll('.swiper-slide');
-        // 슬라이드 요소가 1개이상일때 실행
-        if (slides.length > 1) {
-            console.log("헤더모션실행")
-            const top_header_banner = new Swiper('.top_header_banner .main_swiper', {
-                direction: "vertical",
-                loop: true,
-                slidesPerView: 1,
-                autoplay: {
-                    delay: 6000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
-                    disableOnInteraction: false, // 상호작용 후에도 autoplay 유지
-                },
-            });
-        }
-        /* //2025.06.29 */
-    });
     $("#footer").load("./include/footer.html", function(response, status, xhr) {
         if (status == "error") {
             //console.error("Error loading external HTML:", xhr.status, xhr.statusText);
@@ -122,7 +100,6 @@ $(function() {
     const home_top_visual = new Swiper('.top_visual .main_swiper', {
         loop: true,
         slidesPerView: 1,
-        spaceBetween: 10, /* 2025.06.29 추가 */
         autoplay: {
             delay: 5000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
         },
@@ -131,7 +108,33 @@ $(function() {
             type: 'fraction',
         },
     });
-    /* 2025.06.29 추가 */
+    /* 2025.09.11 메인롤링배너 */
+    const rolling_banner = new Swiper('.rolling_banner .main_swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween:10,
+        autoplay: {
+            delay: 5000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
+        },
+        pagination: {
+            el: '.rolling_banner .swiper-pagination',
+            type: 'fraction',
+        },
+    });
+    /* 2025.09.11 정수기전용관 제품리스트 롤링배너 */
+    const recommend_slide_view_1_banner = new Swiper('.recommend_slide_view_1_banner .main_swiper', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10, 
+        autoplay: {
+            delay: 5000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
+        },
+        pagination: {
+            el: '.recommend_slide_view_1_banner .swiper-pagination',
+            type: 'fraction',
+        },
+    });
+    /* 2025.06.26 추가 */
     const slide_view_1_banner = new Swiper('.slide_view_1_banner .main_swiper', {
         loop: true,
         slidesPerView: 1,
@@ -144,7 +147,9 @@ $(function() {
             type: 'fraction',
         },
     });
-    /* //2025.06.29 추가 */
+    /* //2025.06.26 추가 */
+
+    
     // 이달의신상 이미지 롤링추가
     const md_pick_visual = new Swiper('.md_pick_visual .main_swiper', {
         loop: true,
@@ -169,7 +174,8 @@ $(function() {
             type: 'fraction',
         },
     });
-    /* 2025.06.29 퍼블테스트를 위한 코드로서  개발적용시 주석처리 : 라이브 적용시 메인의 BEST 상품 스크립트와 충돌 */
+
+    /* 2025.06.26 퍼블테스트를 위한 코드로서  개발적용시 주석처리 : 라이브 적용시 메인의 BEST 상품 스크립트와 충돌 
     const home_best_products = new Swiper('.product_object .products_swiper', {
         loop: true,
         slidesPerView: 1,
@@ -180,7 +186,8 @@ $(function() {
           el: '.product_object .products_swiper .pagination_case .swiper-pagination'
         },
     });
-    /* //2025.06.29 */
+    /* //2025.06.26 */
+
 
     const home_best_products_2 = new Swiper('#products_swiper_2', {
         loop: true,
@@ -232,7 +239,9 @@ $(function() {
         checkBox.prop('checked', !checkBox.prop('checked'));
     });
 });
+
 /* 상품상세페이지 (상세설명 ,공통정보, 요약정보) */
+/*
 $(function() {
     $(document).on('click', '.productPageDetail .middle .tab_case ul li a', function(e) {
         var index = $(this).parent().index();
@@ -242,6 +251,9 @@ $(function() {
         $('.productPageDetail .middle .tabs').eq(index).css('display', 'block');
     });
 });
+*/
+
+
 /* 맴버쉽관련 */
 $(function() {
     function inp_checker2() {
@@ -321,89 +333,33 @@ $(function() {
     });
 });
 
-/* 2025.06.29 리뷰세부화면 */
-$(function(){
-    // Swiper 초기화 - 슬라이드가 하나 이상일 때만 활성화
-    const swiperWrapper = document.querySelector('.rdp-product-section .swiper-wrapper');
-    const slides = swiperWrapper.querySelectorAll('.rdp-product-section .swiper-slide');
 
-    let productSwiper = null;
+/* 2025.09.11 recommend_03.html (제품상세) - 커스텀 드롭다운 */
+$(function() {
+    // 드롭다운 토글 버튼 클릭
+    $('.custom_dropdown .dropdown_toggle').on('click', function() {
+        var dropdown = $(this).parent();
+        dropdown.find('.dropdown_menu').stop().slideToggle('fast');
+        dropdown.toggleClass('active');
+    });
 
-    if (slides.length > 1) {
-        productSwiper = new Swiper('.pop-product-swiper', {
-            loop: true,
-            pagination: {
-                el: '.rdp-product-section .swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.pop-product-swiper .swiper-button-next', // 다음 버튼
-                prevEl: '.pop-product-swiper .swiper-button-prev', // 이전 버튼
-            },
-            effect: 'slide',
-            speed: 500,
-            touchRatio: 1,
-            touchAngle: 20,
-            grabCursor: true,
-        });
-    } else {
-        // 슬라이드가 1개면 페이지네이션 숨기기
-        const pagination = document.querySelector('.rdp-product-section .swiper-pagination');
-        if (pagination) {
-            pagination.style.display = 'none';
-        }
+    // 드롭다운 메뉴 아이템 클릭
+    $('.custom_dropdown .dropdown_menu a').on('click', function(e) {
+        e.preventDefault();
+        var $dropdown = $(this).closest('.custom_dropdown');
+        var selectedHtml = $(this).html();
+        $dropdown.find('.dropdown_toggle').html(selectedHtml).addClass('selected');
+        $dropdown.find('.dropdown_menu').stop().slideUp('fast');
+        $dropdown.removeClass('active');
+    });
 
-        // 자동재생 및 터치 기능 비활성화
-        const swiperContainer = document.querySelector('.pop-product-swiper');
-        swiperContainer.style.touchAction = 'pan-y';
-    }
-
-    // 터치 스크롤 개선
-    document.addEventListener('touchstart', function (e) {
-        if (e.touches.length > 1) {
-            e.preventDefault();
+    // 드롭다운 외부 클릭 시 닫기
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.custom_dropdown').length) {
+            $('.custom_dropdown .dropdown_menu').stop().slideUp('fast');
+            $('.custom_dropdown').removeClass('active');
         }
     });
-})
-/* //2025.06.29 리뷰세부화면 */
+});
 
-/* 2025.06.29 리뷰작성화면관련 */
-$(function(){
-    // 별점 기능
-    const stars = document.querySelectorAll('.star-check');
-       
-        let currentRating = 0;
-
-        stars.forEach(star => {
-            star.addEventListener('click', function() {
-                currentRating = parseInt(this.dataset.rating);
-                updateStars();
-                
-            });
-
-            star.addEventListener('mouseover', function() {
-                const hoverRating = parseInt(this.dataset.rating);
-                highlightStars(hoverRating);
-            });
-        });
-
-        document.querySelector('.rwa-rating-section__stars').addEventListener('mouseleave', function() {
-            highlightStars(currentRating);
-        });
-
-        function updateStars() {
-            highlightStars(currentRating);
-        }
-
-        function highlightStars(rating) {
-            stars.forEach((star, index) => {
-                if (index < rating) {
-                    star.classList.add('active');
-                } else {
-                    star.classList.remove('active');
-                }
-            });
-        }
-})
-
-/* //2025.06.29 리뷰작성화면관련 */
+/* 상품상세페이지 (상세설명 ,공통정보, 요약정보) */

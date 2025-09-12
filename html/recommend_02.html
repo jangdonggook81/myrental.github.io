@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:site_name" content="" />
+        <title>정수기 - 제품리스트</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../scss/mstyle.css" />
+        
+
+    </head>
+
+    <body>
+        <div id="wrap">
+
+            <!-- include header(로고, 검색, 로그인, 장바구니) -->
+            <header id="header"></header>
+
+
+
+            <!-- 주요 본문 -->
+            <main id="container">
+                <div class="recommend">
+
+                    <div class="recommend-productPage">
+
+                        <div class="top_visual" style="display: none;">
+                            <div class="img_case">
+                                <p class="txt_obj">
+                                    <span class="t1">요리가 더 맛있어지는 비법</span>
+                                    <span class="t2">주방가전</span>
+                                </p>
+                                <div class="filter_case">
+                                    <!-- 
+                                        - .fade-out 클래스 추가시 5초뒤 사라짐
+                                        - 항상보여주고싶다면 fade-out 클래스를 제거하세요
+                                     -->
+                                    <span class="tit_msg fade-out">
+                                        원하는 상품을 찾아보세요 !
+                                    </span>
+                                    <a class="btn_filter_open" href="#filter" onclick="$('.filter_area').addClass('active');"></a>
+                                </div>
+                                <img src="../images/product_page/top_img.png" alt="카테고리관련이미지">
+                            </div>
+                        </div>
+
+                        <!-- 2025.06.29  슬라이드 -->
+                        <div class="recommend_slide_view_1_banner">
+                            <div class="inner">
+                                <div class="main_swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#1"><img src="https://placehold.co/343x128?text=visual1" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#2"><img src="https://placehold.co/343x128?text=visual2" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#3"><img src="https://placehold.co/343x128?text=visual3" alt=""></a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#4"><img src="https://placehold.co/343x128?text=visual4" alt=""></a>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //2025.06.29 -->
+
+
+                        <div class="tab_box">
+                            <div class="inner">
+                                <ul>
+                                    <li><a class="active" href="#1">냉장고</a></li>
+                                    <li><a href="#1">김치냉장고</a></li>
+                                    <li><a href="#2">김치냉장고</a></li>
+                                    <li><a href="#3">김치냉장고</a></li>
+                                    <li><a href="#4">김치냉장고</a></li>
+                                    <li><a href="#5">김치냉장고</a></li>
+                                    <li><a href="#6">김치냉장고</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="product_list">
+                            <div class="inner">
+                                <!-- 2025.06.29 폰트크기 수정 , 인기순 select 박스, 필터 버튼  -->
+                                <p class="t_total">
+                                    전체
+                                    <span class="count">52</span>
+                                    <select name="sort" class="sort" id="sort">
+                                        <option value="popularity" selected>인기순</option>
+                                        <option value="newest">최신순</option>
+                                    </select>
+                                    <a class="btn_filter_open2" href="#filter" onclick="$('.filter_area').addClass('active'); filter_area_click(); return false"><span class="ir_su">필터버튼</span></a>
+                                </p>
+
+                                <div class="recommend_product_best_xscroll_sub" style="margin-left:-16px;">
+                                    <div class="inner">
+                                        <ul>
+                                            <li><a href="#a">반값할인</a></li>
+                                            <li class="active"><a href="#a">렌탈료면제</a></li>
+                                            <li><a href="#a">타사 보상 혜택</a></li>
+                                            <li><a href="#a">최저가보장</a></li>
+                                            <li><a href="#a">최저가보장</a></li>
+                                            <li><a href="#a">최저가보장</a></li>
+                                            <li><a href="#a">최저가보장</a></li>
+                                            <li><a href="#a">최저가보장</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product_best_xscroll_sub_filter mb15" style="margin-left:-16px;">
+                                    <div class="inner">
+                                        <a class="filter_reset_btn" href="#reset"><span class="ir_su">필터리셋</span></a>
+                                        <ul>
+                                            <li><a href="#a">LG</a></li>
+                                            <li><a href="#a">SAMSUNG</a></li>
+                                            <li><a href="#a">LG</a></li>
+                                            <li><a href="#a">SAMSUNG</a></li>
+                                            <li><a href="#a">LG</a></li>
+                                            <li><a href="#a">SAMSUNG</a></li>
+                                            <li><a href="#a">LG</a></li>
+                                            <li><a href="#a">SAMSUNG</a></li>
+                                            <li><a href="#a">LG</a></li>
+                                            <li><a href="#a">SAMSUNG</a></li>
+                                            <li><a href="#a">LG</a></li>
+                                            <li><a href="#a">SAMSUNG</a></li>
+
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <ul class="recommend_ul">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img_case">
+                                                <img src="../images/recent_products/smaple_img_01.png" alt="샘플">
+                                            </div>
+                                            <!-- //2025.06.29 -->
+                                            <div class="info_case">
+                                                <p class="t1_brand">삼성</p>
+                                                <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                <div class="price_case">
+                                                    <p class="origin_case"><del class="price">55,800원</del></p>
+                                                    <p class="sale_case"><span class="price">38,800원</span>최대 혜택가</p>
+                                                    <p class="price_noti">
+                                                        <strong>25만원~</strong>지원금 혜택
+                                                    </p>
+                                                </div>
+                                                <p class="recommend_sticker_bottom">
+                                                    <span class="ico_box" style="width:auto; color:#145CE6; background:#E8EFFD">얼음 정수기</span>
+                                                  
+                                                </p>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img_case">
+                                                <img src="../images/recent_products/smaple_img_02.png" alt="샘플">
+                                            </div>
+                                            <!-- //2025.06.29 -->
+                                            <div class="info_case">
+                                                <p class="t1_brand">삼성</p>
+                                                <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                <div class="price_case">
+                                                    <p class="origin_case"><del class="price">55,800원</del></p>
+                                                    <p class="sale_case"><span class="price">38,800원</span>최대 혜택가</p>
+                                                    <p class="price_noti">
+                                                        <strong>25만원~</strong>지원금 혜택
+                                                    </p>
+                                                </div>
+                                                <p class="recommend_sticker_bottom">
+                                                  
+                                                    <span class="ico_box" style="width:auto; color:#38C8B5; background:#ECFAF8">이온 정수기</span>
+                                                  
+                                                </p>
+                                            </div>
+
+                                        </a>
+                                    </li><li>
+                                        <a href="#">
+                                            <div class="img_case">
+                                                <img src="../images/recent_products/smaple_img_03.png" alt="샘플">
+                                            </div>
+                                            <!-- //2025.06.29 -->
+                                            <div class="info_case">
+                                                <p class="t1_brand">삼성</p>
+                                                <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                <div class="price_case">
+                                                    <p class="origin_case"><del class="price">55,800원</del></p>
+                                                    <p class="sale_case"><span class="price">38,800원</span>최대 혜택가</p>
+                                                    <p class="price_noti">
+                                                        <strong>25만원~</strong>지원금 혜택
+                                                    </p>
+                                                </div>
+                                                <p class="recommend_sticker_bottom">
+                                                   
+                                                    <span class="ico_box" style="width:auto; color:#E9304B; background:#FDEBED">온수 온도 조절</span>
+                                                </p>
+                                            </div>
+
+                                        </a>
+                                    </li><li>
+                                        <a href="#">
+                                            <div class="img_case">
+                                                <img src="../images/recent_products/smaple_img_04.png" alt="샘플">
+                                            </div>
+                                            <!-- //2025.06.29 -->
+                                            <div class="info_case">
+                                                <p class="t1_brand">삼성</p>
+                                                <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                <div class="price_case">
+                                                    <p class="origin_case"><del class="price">55,800원</del></p>
+                                                    <p class="sale_case"><span class="price">38,800원</span>최대 혜택가</p>
+                                                    <p class="price_noti">
+                                                        <strong>25만원~</strong>지원금 혜택
+                                                    </p>
+                                                </div>
+                                                <p class="recommend_sticker_bottom">
+                                                    <span class="ico_box" style="width:auto; color:#145CE6; background:#E8EFFD">얼음 정수기</span>
+                                                  
+                                                </p>
+                                            </div>
+
+                                        </a>
+                                    </li><li>
+                                        <a href="#">
+                                            <div class="img_case">
+                                                <img src="../images/recent_products/smaple_img_05.png" alt="샘플">
+                                            </div>
+                                            <!-- //2025.06.29 -->
+                                            <div class="info_case">
+                                                <p class="t1_brand">삼성</p>
+                                                <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                <div class="price_case">
+                                                    <p class="origin_case"><del class="price">55,800원</del></p>
+                                                    <p class="sale_case"><span class="price">38,800원</span>최대 혜택가</p>
+                                                    <p class="price_noti">
+                                                        <strong>25만원~</strong>지원금 혜택
+                                                    </p>
+                                                </div>
+                                                <p class="recommend_sticker_bottom">
+                                                    <span class="ico_box" style="width:auto; color:#145CE6; background:#E8EFFD">얼음 정수기</span>
+                                                  
+                                                </p>
+                                            </div>
+
+                                        </a>
+                                    </li><li>
+                                        <a href="#">
+                                            <div class="img_case">
+                                                <img src="../images/recent_products/smaple_img_01.png" alt="샘플">
+                                            </div>
+                                            <!-- //2025.06.29 -->
+                                            <div class="info_case">
+                                                <p class="t1_brand">삼성</p>
+                                                <p class="t2_products_name">웰스 플라즈 마케어 스 플라즈 마케어</p>
+                                                <div class="price_case">
+                                                    <p class="origin_case"><del class="price">55,800원</del></p>
+                                                    <p class="sale_case"><span class="price">38,800원</span>최대 혜택가</p>
+                                                    <p class="price_noti">
+                                                        <strong>25만원~</strong>지원금 혜택
+                                                    </p>
+                                                </div>
+                                                <p class="recommend_sticker_bottom">
+                                                  
+                                                    <span class="ico_box" style="width:auto; color:#38C8B5; background:#ECFAF8">이온 정수기</span>
+                                                    <span class="ico_box" style="width:auto; color:#E9304B; background:#FDEBED">온수 온도 조절</span>
+                                                </p>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 상품필터 -->
+                        <div class="filter_area ">
+                            <div class="inner">
+                                <p class="top">
+                                    원하는 상품을 찾아보세요 !
+                                    <a class="btn_close" href="#close" onclick="$('.filter_area').removeClass('active');"><span class="ir_su">필터창닫기 버튼</span></a>
+                                </p>
+                                <div class="middle">
+                                    <a class="active" href="#a">브랜드</a>
+                                    <a href="#a">용량</a>
+                                    <a href="#a">타입</a>
+                                    <a href="#a">기능</a>
+                                </div>
+                                <div class="bottom boxs">
+                                    <ul>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">LG</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">코스텔</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">엘지</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">삼성</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">월풀</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">기타</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">위니아</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">루컴즈</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bottom boxs" style="display: none;">
+                                    <ul>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">100L이상</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">200L이상</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">300L이상</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">400L이상</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">500L이상</p>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="bottom boxs" style="display: none;">
+                                    <ul>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">1도어</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">2도어</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">3도어</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">4도어</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">5도어</p>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="bottom boxs" style="display: none;">
+                                    <ul>
+                                        <li>
+                                            <div class="ques">
+                                                <p class="checkCase">
+                                                    <input type="checkbox" id="agree">
+                                                    <label for="agree"></label>
+                                                </p>
+                                                <p class="wordCase">얼음정수기</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="search_case">
+                                    <a href="#lg">LG</a>
+                                    <a href="#위니아">위니아</a>
+                                    <a href="#lg">LG</a>
+                                    <a href="#위니아">위니아</a>
+                                    <a href="#lg">LG</a>
+                                    <a href="#위니아">위니아</a>
+                                    <a href="#lg">LG</a>
+                                    <a href="#위니아">위니아</a>
+                                    <a href="#lg">LG</a>
+                                    <a href="#위니아">위니아</a>
+                                    <a href="#lg">마이렌탈브랜드</a>
+                                </div>
+                                <div class="btn_case">
+                                    <a class="btn_reset" href="#초기화">초기화</a>
+                                    <a class="btn_search_ok" href="#검색하기">검색하기</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </main>
+
+            <!-- include footer -->
+            <footer id="footer"></footer>
+
+
+
+        </div>
+        <!-- // wrap -->
+
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="../js/common.js"> </script>
+
+    </body>
+
+</html>

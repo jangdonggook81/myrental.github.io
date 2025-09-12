@@ -1676,18 +1676,19 @@
         // max-width: 375px;
         margin: 0 auto;
         background-color: white;
-        min-height: 100vh;
+        //min-height: 100vh;
 
         .promo-banner {
-           aspect-ratio: 344 / 100; /* 원본 비율 유지 */
-            background: no-repeat center/344px 100px url('../images/review/banner_review_event.png');
+           //aspect-ratio: 344 / 100; /* 원본 비율 유지 */
+            //background: no-repeat center/344px 100px url('../images/review/banner_review_event.png');
+            
             color: white;
-            padding: 25px 20px;
+            padding: 0 16px;
             text-align: center;
             margin: 24px auto;
             border-radius: 16px;
             position: relative;
-            height: 100px;
+            height: auto;
             box-sizing: border-box;
 
             .tit1 {
@@ -1714,6 +1715,7 @@
                 letter-spacing: -0.13px;
                 text-align: left;
             }
+            img{width: 100%;height: auto;}
         }
 
         .rating-section {
