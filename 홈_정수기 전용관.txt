@@ -1,4 +1,18 @@
-to JR
+# 2025.09.15
+<!-- 2025.09.15 -->  주석 확인
+0. 정수기 상세페이지
+(as is)
+ -> productPageDetail recommend-productPageDetail 이중클래스 되어있는것 을 
+(to be)
+ -> recommend-productPageDetail 이렇게 수정
+
+1.옵션필터 위치 옴기고 , 퀵메뉴 나오게 해놓은 상태에서 
+2.옵션필터 스크롤 안생기게 수정
+
+
+
+
+# 2025.09.11
 
 1.산출물 : js , css , images 파일 덮음처리
 
