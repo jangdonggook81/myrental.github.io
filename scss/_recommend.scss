@@ -89,7 +89,7 @@
                 margin-bottom: 8px;
                 display: flex;
                 gap: 8px;
-                // flex-wrap: wrap;
+                flex-wrap: wrap;
                 justify-content: space-between;
                 width: 100%;
 
@@ -97,7 +97,7 @@
                     position: relative;
                     cursor: pointer;
                     display: block;
-                    width: 50%;
+                    width: calc(50% - 4px);
 
                     & input[type="radio"] {
                         position: absolute;
@@ -1497,7 +1497,7 @@
                         box-sizing: border-box;
 
                         &.box1 {
-                            flex: 0 0 140px;
+                            flex: 0 0 42%;
 
                             .bb1 {
                                 position: relative;
@@ -1512,7 +1512,7 @@
                                 font-weight: 400;
                                 line-height: 20px;
                                 /* 142.857% */
-                                letter-spacing: -0.35px;
+                                letter-spacing: -0.5px;
 
                                 &:before {
                                     content: '';
@@ -1533,12 +1533,12 @@
                                 font-weight: 700;
                                 line-height: 24px;
                                 /* 150% */
-                                letter-spacing: -0.4px;
+                                letter-spacing: -0.5px;
                             }
                         }
 
                         &.box2 {
-                            flex: 0 0 196px;
+                            flex: 0 0 58%;
 
                             .bb1 {
                                 position: relative;
@@ -1799,10 +1799,152 @@
         }
 
 
+
+            .bottom {
+            padding-top: 30px;
+            border-top: 8px solid #f5f5f5;
+
+            .md_pick {
+                padding-bottom: 80px;
+                box-sizing: border-box;
+
+                .tit_case {
+                    padding-left: 16px;
+                    box-sizing: border-box;
+
+                    .t1 {
+                        color: var(--gray-191919, #191919);
+                        font-family: Pretendard;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 30px;
+                        letter-spacing: -0.5px;
+                    }
+                }
+
+                .md_swiper_case {
+                    box-sizing: border-box;
+                    overflow: hidden;
+
+                    .inner {
+                        position: relative;
+                        width: 100%;
+
+                        .md_swiper {
+                            width: 100%;
+                            padding: 0 16px;
+                            box-sizing: border-box;
+
+                            .swiper-wrapper {
+                                padding-top: 16px;
+                                padding-bottom: 10px;
+                                box-sizing: border-box;
+
+                                .swiper-slide {
+                                    box-sizing: border-box;
+                                    border-radius: 4px;
+                                    background: #FFF;
+                                    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+
+                                    a {
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        font-size: 17px;
+                                        color: #000;
+
+                                        .product_img {
+                                            img {
+                                                display: block;
+                                                width: 100%;
+                                            }
+                                        }
+
+                                        .info_case {
+                                            width: 100%;
+                                            margin-top: 12px;
+                                            padding: 0 16px 18px;
+                                            box-sizing: border-box;
+                                            font-family: Pretendard;
+
+                                            .t1_brand {
+                                                color: var(--gray-191919, #191919);
+                                                font-family: Pretendard;
+                                                font-size: 15px;
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                line-height: 20px;
+                                                letter-spacing: -0.3px;
+                                            }
+
+                                            .t2_products_name {
+                                                overflow: hidden;
+                                                color: var(--gray-191919, #191919);
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                                font-size: 14px;
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                line-height: 20px;
+                                                letter-spacing: -0.35px;
+                                                margin-bottom: 12px;
+                                            }
+
+                                            .price_case {
+                                                .origin_case {
+                                                    color: var(--gray-757575, #757575);
+                                                    font-size: 14px;
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    line-height: 20px;
+                                                    letter-spacing: -0.35px;
+
+                                                    .price {
+                                                        color: var(--gray-757575, #757575);
+                                                        letter-spacing: -0.35px;
+                                                        margin-left: 12px;
+                                                    }
+                                                }
+
+                                                .sale_case {
+                                                    color: var(--color-main-blue, #3182F7);
+                                                    font-size: 14px;
+                                                    font-style: normal;
+                                                    font-weight: 700;
+                                                    line-height: 22px;
+                                                    letter-spacing: -0.35px;
+
+                                                    .price {
+                                                        color: var(--color-main-blue, #3182F7);
+                                                        font-size: 16px;
+                                                        font-weight: 700;
+                                                        line-height: 24px;
+                                                        letter-spacing: -0.4px;
+                                                        margin-left: 12px;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
         .btn_case {
             position: fixed;
             width: 100%;
             bottom: 0px;
+            z-index: 10;
             display: flex;
             padding: 10px;
             box-sizing: border-box;
@@ -2563,12 +2705,18 @@
                 flex-direction: column;
                 gap: 16px;
                 overflow: hidden;
-
-                .option_case {
+                & form{
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    // gap: 16px;
+                    overflow: hidden;
+                }
+                .option_case , .radio_option , .card_area{
                     display: flex;
                     flex-direction: column;
                     gap: 6px;
-
+                    padding-bottom:16px;
                     .tit {
                         color: var(--color-gray-900, #191F28);
                         font-family: Pretendard;
@@ -2579,7 +2727,7 @@
                         letter-spacing: -0.325px;
                     }
 
-                    .case {
+                    .case, .choice_case {
                         display: flex;
                         gap: 8px;
                         flex-wrap: wrap;

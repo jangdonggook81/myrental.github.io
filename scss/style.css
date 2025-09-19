@@ -610,6 +610,9 @@ html, body {
   line-height: 22px;
   letter-spacing: -0.35px;
 }
+.common_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #bdbdbd);
+}
 .common_case input::placeholder {
   color: var(--gray-dddddd, #bdbdbd);
 }
@@ -1056,7 +1059,8 @@ html, body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .floating .inner .counseling_menu {
   position: relative;
@@ -1150,7 +1154,8 @@ html, body {
   left: 0;
   top: 0;
   background: var(--15, rgba(0, 0, 0, 0.15));
-  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -1231,6 +1236,9 @@ html, body {
   border-bottom: 1px solid #DDDDDD;
   position: relative;
   width: 100%;
+}
+.page_basic .inner .info_area .password_case .inp_case input::-moz-placeholder {
+  color: #bdbdbd;
 }
 .page_basic .inner .info_area .password_case .inp_case input::placeholder {
   color: #bdbdbd;
@@ -3050,7 +3058,8 @@ html, body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home .product_menu_img_xscroll .inner ul li a .t1_products_name {
   display: block;
@@ -3064,7 +3073,7 @@ html, body {
   letter-spacing: -0.35px;
 }
 .home .single_banner {
-  margin-bottom: 60px;
+  margin: 60px 0;
   padding: 0 7px;
 }
 .home .single_banner a {
@@ -3079,7 +3088,7 @@ html, body {
 .home .rolling_banner .inner {
   position: relative;
   width: 100%;
-  padding: 10px 16px;
+  padding: 10px 7px;
   box-sizing: border-box;
 }
 .home .rolling_banner .inner .main_swiper {
@@ -3291,7 +3300,8 @@ html, body {
   height: 120px;
   border-radius: 8px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home .home_beat_products .product_object .inner .products_swiper .swiper-wrapper .swiper-slide .list li a .left .img_case .ranking {
   z-index: 10;
@@ -3323,7 +3333,8 @@ html, body {
   display: block;
   width: 120px;
   height: 120px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home .home_beat_products .product_object .inner .products_swiper .swiper-wrapper .swiper-slide .list li a .right {
   font-family: Pretendard;
@@ -3738,7 +3749,8 @@ html, body {
   height: 120px;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home .months_pick .product_object .inner .products_swiper .swiper-wrapper .swiper-slide .list li a .left .img_case .ranking {
   z-index: 10;
@@ -3770,7 +3782,8 @@ html, body {
   display: block;
   width: 120px;
   height: 120px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .home .months_pick .product_object .inner .products_swiper .swiper-wrapper .swiper-slide .list li a .right {
   font-family: Pretendard;
@@ -4098,6 +4111,10 @@ html, body {
   font-weight: 500;
   background: var(--gray-f5f5f5, #F5F5F5);
 }
+.search .top .inner .inp_search_case .inp_txt::-moz-placeholder {
+  opacity: 1;
+  color: #9E9E9E;
+}
 .search .top .inner .inp_search_case .inp_txt::placeholder {
   opacity: 1;
   color: #9E9E9E;
@@ -4319,6 +4336,10 @@ html, body {
   font-weight: 500;
   line-height: 20px; /* 142.857% */
   letter-spacing: -0.35px;
+}
+.modal_search .top .inner .inp_search_case .inp_txt::-moz-placeholder {
+  opacity: 1;
+  color: #9E9E9E;
 }
 .modal_search .top .inner .inp_search_case .inp_txt::placeholder {
   opacity: 1;
@@ -4551,13 +4572,15 @@ html, body {
   height: 80px;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .recent_products .middle .inner .list li a .left .img_case img {
   display: block;
   width: 80px;
   height: 80px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .recent_products .middle .inner .list li a .right {
   font-family: Pretendard;
@@ -4716,14 +4739,16 @@ html, body {
   margin-bottom: 16px;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: relative;
 }
 .best_products .product_list .inner ul li a .img_case img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .best_products .product_list .inner ul li a .img_case .ranking {
   /*
@@ -4911,6 +4936,9 @@ html, body {
   line-height: 20px;
   letter-spacing: -0.35px;
 }
+.counseling .inner .write_area .inp_area .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .counseling .inner .write_area .inp_area .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
 }
@@ -5003,6 +5031,9 @@ html, body {
   line-height: 45px;
   letter-spacing: -0.35px;
   border: 0;
+}
+.counseling .inner .write_area_wide .inp_area .inp_case input::-moz-placeholder {
+  color: #9E9E9E;
 }
 .counseling .inner .write_area_wide .inp_area .inp_case input::placeholder {
   color: #9E9E9E;
@@ -5114,6 +5145,9 @@ html, body {
   letter-spacing: -0.35px;
   border: 0;
 }
+.counseling .inner .write_area_wide .inp_area ase input::-moz-placeholder {
+  color: #9E9E9E;
+}
 .counseling .inner .write_area_wide .inp_area ase input::placeholder {
   color: #9E9E9E;
 }
@@ -5181,6 +5215,9 @@ html, body {
   letter-spacing: -0.35px;
   padding-left: 12px;
   box-sizing: border-box;
+}
+.counseling .inner .write_area_wide .inp_area ase .number_box .inp_case input::-moz-placeholder {
+  color: #DDD;
 }
 .counseling .inner .write_area_wide .inp_area ase .number_box .inp_case input::placeholder {
   color: #DDD;
@@ -5378,6 +5415,9 @@ html, body {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.35px;
+}
+.modal_counseling .inner .write_area .inp_area .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
 }
 .modal_counseling .inner .write_area .inp_area .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -5745,7 +5785,7 @@ html, body {
 }
 .productPage .tab_box .inner ul li a.active, .productPage .tab_box .inner ul li a:hover {
   color: var(--gray-ffffff, #FFF);
-  background: var(--gray-191919, #191919);
+  background: var(--gray-191919, #7B8696);
 }
 .productPage .product_list .inner {
   overflow: hidden;
@@ -5831,7 +5871,8 @@ html, body {
   margin-bottom: 16px;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   /*.sticker_top {
       //margin-top: 3px;
       position: absolute;
@@ -5861,7 +5902,8 @@ html, body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .productPage .product_list .inner > ul > li a .info_case {
   width: 100%;
@@ -5886,36 +5928,57 @@ html, body {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.35px;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 .productPage .product_list .inner > ul > li a .info_case .price_case .origin_case {
-  color: var(--gray-757575, #757575);
-  font-size: 14px;
+  color: #9E9E9E;
+  font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.35px;
 }
 .productPage .product_list .inner > ul > li a .info_case .price_case .origin_case .price {
-  color: var(--gray-757575, #757575);
+  color: #9E9E9E;
   letter-spacing: -0.35px;
-  margin-left: 12px;
 }
 .productPage .product_list .inner > ul > li a .info_case .price_case .sale_case {
-  color: var(--color-main-blue, #3182F7);
-  font-size: 14px;
+  color: #3182F7;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 22px;
   letter-spacing: -0.35px;
 }
 .productPage .product_list .inner > ul > li a .info_case .price_case .sale_case .price {
-  color: var(--color-main-blue, #3182F7);
+  color: #3182F7;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.4px;
-  margin-left: 12px;
+  margin-right: 3px;
+}
+.productPage .product_list .inner > ul > li a .info_case .price_noti {
+  display: flex;
+  align-items: baseline;
+  color: var(--gray-191919, #191919);
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  /* 183.333% */
+  letter-spacing: -0.3px;
+}
+.productPage .product_list .inner > ul > li a .info_case .price_noti strong {
+  color: var(--gray-191919, #191919);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.35px;
+  margin-right: 3px;
 }
 .productPage .filter_area {
   z-index: 102;
@@ -7153,7 +7216,8 @@ html, body {
 .productPageDetail .tab01_inner .review-photos .photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .productPageDetail .tab01_inner .review-item {
   padding: 0 16px;
@@ -7296,7 +7360,8 @@ html, body {
 .productPageDetail .tab01_inner .review-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .productPageDetail .tab01_inner .review-text {
   flex: 1;
@@ -7650,13 +7715,15 @@ html, body {
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .cart .middle .list li .r_box .left .img_case img {
   display: block;
   width: 76px;
   height: 76px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .cart .middle .list li .r_box .right {
   font-family: Pretendard;
@@ -8011,6 +8078,9 @@ html, body {
   line-height: 20px;
   letter-spacing: -0.35px;
 }
+.rentalApplication .middle .name_case .inp_case input::-moz-placeholder, .rentalApplication .middle .phone_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .rentalApplication .middle .name_case .inp_case input::placeholder,
 .rentalApplication .middle .phone_case .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -8051,6 +8121,9 @@ html, body {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.35px;
+}
+.rentalApplication .middle .address_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
 }
 .rentalApplication .middle .address_case .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -8216,6 +8289,9 @@ html, body {
   line-height: 20px;
   letter-spacing: -0.35px;
 }
+.rentalApplication .middle .msg_case .inp_textarea textarea::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .rentalApplication .middle .msg_case .inp_textarea textarea::placeholder {
   color: var(--gray-dddddd, #DDD);
 }
@@ -8302,13 +8378,15 @@ html, body {
   box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .rentalApplication .middle .buy_info_area .list li .r_box .left .img_case img {
   display: block;
   width: 80px;
   height: 80px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .rentalApplication .middle .buy_info_area .list li .r_box .right {
   font-family: Pretendard;
@@ -8955,7 +9033,8 @@ html, body {
   flex-shrink: 0;
   border-radius: 4px;
   background: var(--gray-ffffff, #FFF);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   color: var(--gray-191919, #191919);
   text-align: center;
   font-family: Pretendard;
@@ -9270,13 +9349,15 @@ html, body {
   margin-bottom: 16px;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .eventDetailPage .middle .inner .filter_area .product_list .inner ul li a .img_case img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .eventDetailPage .middle .inner .filter_area .product_list .inner ul li a .info_case {
   width: 100%;
@@ -9476,6 +9557,10 @@ html, body {
   color: #191919;
   font-weight: 500;
   background: var(--gray-f5f5f5, #F5F5F5);
+}
+.customerSupport .top_search .inner .inp_search_case .inp_txt::-moz-placeholder {
+  opacity: 1;
+  color: #9E9E9E;
 }
 .customerSupport .top_search .inner .inp_search_case .inp_txt::placeholder {
   opacity: 1;
@@ -9944,13 +10029,15 @@ html, body {
   margin-bottom: 16px;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .customerSupport .middle .inner .filter_area .product_list .inner ul li a .img_case img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .customerSupport .middle .inner .filter_area .product_list .inner ul li a .info_case {
   width: 100%;
@@ -10226,6 +10313,9 @@ html, body {
   letter-spacing: -0.35px;
   border: 0;
 }
+.business .b2b_business_form .inner .business_form_input .input_area .inp_case input::-moz-placeholder {
+  color: #BDBDBD;
+}
 .business .b2b_business_form .inner .business_form_input .input_area .inp_case input::placeholder {
   color: #BDBDBD;
 }
@@ -10250,6 +10340,9 @@ html, body {
   line-height: 150%; /* 24px */
   letter-spacing: -0.4px;
   background: #F5F5F5;
+}
+.business .b2b_business_form .inner .business_form_input .input_area .inp_textarea textarea::-moz-placeholder {
+  color: #BDBDBD;
 }
 .business .b2b_business_form .inner .business_form_input .input_area .inp_textarea textarea::placeholder {
   color: #BDBDBD;
@@ -11614,6 +11707,9 @@ html, body {
   line-height: 20px;
   letter-spacing: -0.35px;
 }
+.businessApply .middle .name_case .inp_case input::-moz-placeholder, .businessApply .middle .phone_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .businessApply .middle .name_case .inp_case input::placeholder,
 .businessApply .middle .phone_case .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -11706,6 +11802,9 @@ html, body {
   padding-left: 12px;
   box-sizing: border-box;
 }
+.businessApply .middle .phone_number_case .number_box .inp_case input::-moz-placeholder, .businessApply .middle .email_case .number_box .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .businessApply .middle .phone_number_case .number_box .inp_case input::placeholder, .businessApply .middle .email_case .number_box .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
 }
@@ -11761,6 +11860,9 @@ html, body {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.35px;
+}
+.businessApply .middle .msg_case .inp_textarea textarea::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
 }
 .businessApply .middle .msg_case .inp_textarea textarea::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -12067,6 +12169,9 @@ html, body {
   line-height: 20px;
   letter-spacing: -0.35px;
 }
+.modal_businessApply .middle .name_case .inp_case input::-moz-placeholder, .modal_businessApply .middle .phone_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .modal_businessApply .middle .name_case .inp_case input::placeholder,
 .modal_businessApply .middle .phone_case .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -12159,6 +12264,9 @@ html, body {
   padding-left: 12px;
   box-sizing: border-box;
 }
+.modal_businessApply .middle .phone_number_case .number_box .inp_case input::-moz-placeholder, .modal_businessApply .middle .email_case .number_box .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .modal_businessApply .middle .phone_number_case .number_box .inp_case input::placeholder, .modal_businessApply .middle .email_case .number_box .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
 }
@@ -12214,6 +12322,9 @@ html, body {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.35px;
+}
+.modal_businessApply .middle .msg_case .inp_textarea textarea::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
 }
 .modal_businessApply .middle .msg_case .inp_textarea textarea::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -12414,6 +12525,9 @@ html, body {
   line-height: 22px;
   letter-spacing: -0.35px;
 }
+.membership .inner .info_area .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #bdbdbd);
+}
 .membership .inner .info_area .inp_case input::placeholder {
   color: var(--gray-dddddd, #bdbdbd);
 }
@@ -12528,6 +12642,9 @@ html, body {
   font-weight: 500;
   line-height: 22px;
   letter-spacing: -0.35px;
+}
+.membership .inner .address_case .right .inp_case input::-moz-placeholder, .membership .inner .phone_cert .right .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
 }
 .membership .inner .address_case .right .inp_case input::placeholder,
 .membership .inner .phone_cert .right .inp_case input::placeholder {
@@ -12993,6 +13110,9 @@ html, body {
   letter-spacing: -0.35px;
   padding-left: 12px;
   box-sizing: border-box;
+}
+.membershipLogin .inner .email_case .inp_case input::-moz-placeholder, .membershipLogin .inner .pw_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #bdbdbd);
 }
 .membershipLogin .inner .email_case .inp_case input::placeholder,
 .membershipLogin .inner .pw_case .inp_case input::placeholder {
@@ -13559,6 +13679,9 @@ html, body {
   line-height: 20px;
   letter-spacing: -0.35px;
 }
+.mypage .page3 .msg_case .inp_textarea textarea::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .mypage .page3 .msg_case .inp_textarea textarea::placeholder {
   color: var(--gray-dddddd, #DDD);
 }
@@ -13583,7 +13706,8 @@ html, body {
 .mypage .page3 .msg_case .inp_file_box .inp_flle.check_file .img_box img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mypage .page3 .msg_case .inp_file_box .inp_flle.check_file input {
   display: none;
@@ -13616,7 +13740,8 @@ html, body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mypage .page4 .top .inner .tit {
   height: 50px;
@@ -13679,13 +13804,15 @@ html, body {
   height: 80px;
   border-radius: 4px;
   border: 1px solid var(--gray-eeeeee, #EEE);
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mypage .page4 .middle .order_by_date .inner .list li .prd_case .left .img_case img {
   display: block;
   width: 80px;
   height: 80px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mypage .page4 .middle .order_by_date .inner .list li .prd_case .right {
   font-family: Pretendard;
@@ -13927,6 +14054,9 @@ html, body {
   line-height: 22px;
   letter-spacing: -0.35px;
 }
+.mypage .page5 .info_area .id_case .inp_case input::-moz-placeholder, .mypage .page5 .info_area .password_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #bdbdbd);
+}
 .mypage .page5 .info_area .id_case .inp_case input::placeholder,
 .mypage .page5 .info_area .password_case .inp_case input::placeholder {
   color: var(--gray-dddddd, #bdbdbd);
@@ -14140,6 +14270,9 @@ html, body {
   line-height: 22px;
   letter-spacing: -0.35px;
 }
+.mypage .page6 .inner .info_area .name_case .inp_case input::-moz-placeholder, .mypage .page6 .inner .info_area .phone_number_case .inp_case input::-moz-placeholder, .mypage .page6 .inner .info_area .password_case .inp_case input::-moz-placeholder, .mypage .page6 .inner .info_area .email_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #bdbdbd);
+}
 .mypage .page6 .inner .info_area .name_case .inp_case input::placeholder,
 .mypage .page6 .inner .info_area .phone_number_case .inp_case input::placeholder,
 .mypage .page6 .inner .info_area .password_case .inp_case input::placeholder,
@@ -14241,6 +14374,9 @@ html, body {
   font-weight: 500;
   line-height: 22px;
   letter-spacing: -0.35px;
+}
+.mypage .page6 .inner .info_area .pw_case .right .inp_case input::-moz-placeholder, .mypage .page6 .inner .info_area .address_case .right .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
 }
 .mypage .page6 .inner .info_area .pw_case .right .inp_case input::placeholder,
 .mypage .page6 .inner .info_area .address_case .right .inp_case input::placeholder {
@@ -14465,6 +14601,9 @@ html, body {
   line-height: 22px;
   letter-spacing: -0.35px;
 }
+.mypage .page6 .phone_cert .right .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
+}
 .mypage .page6 .phone_cert .right .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
 }
@@ -14641,6 +14780,9 @@ html, body {
   line-height: 22px;
   letter-spacing: -0.35px;
 }
+.mypage .page7 .inner .password_case .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #bdbdbd);
+}
 .mypage .page7 .inner .password_case .inp_case input::placeholder {
   color: var(--gray-dddddd, #bdbdbd);
 }
@@ -14747,6 +14889,9 @@ html, body {
   font-weight: 500;
   line-height: 22px;
   letter-spacing: -0.35px;
+}
+.address_case_modify .right .inp_case input::-moz-placeholder {
+  color: var(--gray-dddddd, #DDD);
 }
 .address_case_modify .right .inp_case input::placeholder {
   color: var(--gray-dddddd, #DDD);
@@ -14948,7 +15093,8 @@ html, body {
 .review_gallery .review_detail_popup .pop-product-swiper .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .review_gallery .review_detail_popup .pop-product-swiper .swiper-pagination {
   bottom: 20px;
@@ -15460,7 +15606,8 @@ html, body {
 .review_write_area .review_write_popup .rwa-photo-section__upload .photo-preview img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 8px;
 }
 .review_write_area .review_write_popup .rwa-review-section {
@@ -15544,6 +15691,9 @@ html, body {
   /* 24px */
   letter-spacing: -0.15px;
   outline-color: #191F28;
+}
+.review_write_area .review_write_popup .rwa-review-section__textarea::-moz-placeholder {
+  color: #B0B8C1;
 }
 .review_write_area .review_write_popup .rwa-review-section__textarea::placeholder {
   color: #B0B8C1;
