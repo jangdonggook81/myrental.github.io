@@ -428,7 +428,7 @@
                         </div>
 
 
-                         <!-- 2025.09.15 div 위치이동 -->
+                        <!-- 2025.09.15 div 위치이동 -->
                         <div class="filter_option_area" style="display: block;">
                             <div class="inner">
                                 <div class="top">
@@ -441,7 +441,7 @@
                     $('.filter_option_area').removeClass('active')"><span class="ir_su">닫기버튼</span></a>
                                 </div>
                                 <div class="scroll_area">
-                                    <div class="scroll_inner">
+                                    <!-- <div class="scroll_inner">
                                         <article class="option_case">
                                             <p class="tit">렌탈약정기간</p>
                                             <div class="case">
@@ -569,7 +569,74 @@
                                             <span class="t1">최종 렌탈가</span>
                                             <span class="t2">월 2,5000원</span>
                                         </article>
+                                    </div> -->
+
+                                    <!-- 2025.09.19 -->
+                                    <div class="scroll_inner">
+                                        <form name="product_form" id="product_form" method="POST" action="/cart_update.php">
+                                            <input type="hidden" name="selected_products" value="19988">
+                                            <input type="hidden" name="product_id" value="19988">
+                                            <input type="hidden" name="no" value="19988">
+                                            <input type="hidden" name="sw_direct" value="">
+                                            <input type="hidden" id="it_price" value="21000">
+                                            <input type="hidden" name="card_sale_amount" value="0">
+
+                                            <section id="sit_sel_option_rental"><input type="hidden" name="io_type[19988][]" value="0"><input type="hidden" name="io_id[19988][]" value="72개월3개월마다"><input type="hidden" name="io_value[19988][]" value="72개월 / 3개월마다"><input type="hidden" name="io_price[19988][]" class="io_price" value="0"><input type="hidden" name="io_stock[19988][]" class="io_stock" value="0"><input type="hidden" name="ct_qty[19988][]" value="1" class="num_input"></section>
+
+                                            <div class="radio_option month_period">
+                                                <p class="tit">약정</p>
+                                                <div class="choice_case">
+                                                    <label class="btn"><input type="radio" name="it_option_1" value="72개월" class="it_option sch_option_chk_btn" checked=""><span class="label">72개월</span></label>
+                                                    <label class="btn"><input type="radio" name="it_option_1" value="60개월" class="it_option sch_option_chk_btn"><span class="label">60개월</span></label>
+                                                    <label class="btn"><input type="radio" name="it_option_1" value="48개월" class="it_option sch_option_chk_btn"><span class="label">48개월</span></label>
+                                                </div>
+                                            </div>
+                                            <div class="radio_option month_period">
+                                                <p class="tit">관리주기</p>
+                                                <div class="choice_case">
+                                                    <label class="btn"><input type="radio" name="it_option_2" value="3개월마다,0,0" class="it_option sch_option_chk_btn" checked="checked"><span class="label">3개월마다</span></label>
+                                                    <label class="btn"><input type="radio" name="it_option_2" value="6개월마다,1000,0" class="it_option sch_option_chk_btn"><span class="label">6개월마다</span></label>
+                                                    <label class="btn"><input type="radio" name="it_option_2" value="셀프관리,2000,0" class="it_option sch_option_chk_btn"><span class="label">셀프관리</span></label>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="radio_option">
+                                                <p class="tit">컬러</p>
+                                                <div class="choice_case">
+
+                                                    <label class="btn">
+                                                        <input type="radio" name="month_period_2" class="sch_option_chk_btn" value="8">
+                                                        <span class="label">실버</span>
+                                                    </label>
+
+                                                    <label class="btn">
+                                                        <input type="radio" name="month_period_2" class="sch_option_chk_btn" value="7">
+                                                        <span class="label">골드</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="card_area">
+                                                <p class="tit">할인카드</p>
+                                                <div class="choice_case">
+                                                    <select name="card_kind" id="">
+                                                        <option>할인카드 선택</option>
+                                                        <option data-card-dc="0" value="" selected="">할인 미적용</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <article class="option_result_case">
+                                                <span class="t1">최종 렌탈가</span>
+                                                <span class="t2">월 <span id="sit_tot_card_price2_bottom">21,000</span>원</span>
+                                            </article>
+
+                                        </form>
+
+
                                     </div>
+                                     <!-- //2025.09.19 여기까지 -->
                                 </div>
                             </div>
                         </div>
