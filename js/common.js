@@ -3,7 +3,7 @@ function adjustScrollingHeight() {
     var topHeight = document.querySelector('.modal_search .top').offsetHeight;
     var middleHeight = document.querySelector('.modal_search .middle').offsetHeight;
     var bottomHeight = window.innerHeight - topHeight - middleHeight; // 계산된 높이
-    document.querySelector('.modal_search .list_scrolling').style.height = (bottomHeight - 120) + 'px';
+    document.querySelector('.modal_search .list_scrolling').style.height = (bottomHeight - 200) + 'px';   // 2025.09.22  -200 으로 수정
 }
 $(function() {
     adjustScrollingHeight();
@@ -11,7 +11,30 @@ $(function() {
     window.onresize = adjustScrollingHeight;
 });
 $(function() {
-   
+    /* 2025.09.11 작업후 삭제처리 */
+    $("#header").load("./include/header.html", function(response, status, xhr) {
+        if (status == "error") {
+            //console.error("Error loading external HTML:", xhr.status, xhr.statusText);
+        }
+
+        /* 2025.06.29 */
+        const swiperContainer = document.querySelector('.top_header_banner .main_swiper');
+        const slides = swiperContainer.querySelectorAll('.swiper-slide');
+        // 슬라이드 요소가 1개이상일때 실행
+        if (slides.length > 1) {
+            console.log("헤더모션실행")
+            const top_header_banner = new Swiper('.top_header_banner .main_swiper', {
+                direction: "vertical",
+                loop: true,
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 6000, //5초마다 자동롤링 ( 1000 1초 ,  2000 2초 )
+                    disableOnInteraction: false, // 상호작용 후에도 autoplay 유지
+                },
+            });
+        }
+    });
+     /* 2025.09.11 작업후 삭제처리 */
 
     $("#footer").load("./include/footer.html", function(response, status, xhr) {
         if (status == "error") {
@@ -334,32 +357,4 @@ $(function() {
 });
 
 
-/* 2025.09.11 recommend_03.html (제품상세) - 커스텀 드롭다운 */
-$(function() {
-    // 드롭다운 토글 버튼 클릭
-    $('.custom_dropdown .dropdown_toggle').on('click', function() {
-        var dropdown = $(this).parent();
-        dropdown.find('.dropdown_menu').stop().slideToggle('fast');
-        dropdown.toggleClass('active');
-    });
 
-    // 드롭다운 메뉴 아이템 클릭
-    $('.custom_dropdown .dropdown_menu a').on('click', function(e) {
-        e.preventDefault();
-        var $dropdown = $(this).closest('.custom_dropdown');
-        var selectedHtml = $(this).html();
-        $dropdown.find('.dropdown_toggle').html(selectedHtml).addClass('selected');
-        $dropdown.find('.dropdown_menu').stop().slideUp('fast');
-        $dropdown.removeClass('active');
-    });
-
-    // 드롭다운 외부 클릭 시 닫기
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.custom_dropdown').length) {
-            $('.custom_dropdown .dropdown_menu').stop().slideUp('fast');
-            $('.custom_dropdown').removeClass('active');
-        }
-    });
-});
-
-/* 상품상세페이지 (상세설명 ,공통정보, 요약정보) */
